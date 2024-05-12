@@ -6,8 +6,8 @@ const PostListNavigation = ({ numPages, currentPage }) => {
   const isLast = currentPage === numPages;
   const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString();
   const nextPage = (currentPage + 1).toString();
-  const prevPageLink = "/blog/" + prevPage;
-  const nextPageLink = "/blog/" + nextPage;
+  const prevPageLink = "/radia/" + prevPage;
+  const nextPageLink = "/radia/" + nextPage;
   return (
     <div>
       <div>
@@ -17,7 +17,7 @@ const PostListNavigation = ({ numPages, currentPage }) => {
             <p className="text-xs text-gray-500">Previous page</p>
             {!isFirst && (
               <Link to={prevPageLink}>
-                <p className="block md:inline-block mt-4 md:mt-0 no-underline font-medium text-primary border-b-2 border-transparent hover:border-green-500">
+                <p className="block md:inline-block mt-4 md:mt-0 no-underline font-medium text-primary border-b-2 border-transparent hover:border-orange-400">
                   ← Page {currentPage - 1}
                 </p>
               </Link>
@@ -30,7 +30,7 @@ const PostListNavigation = ({ numPages, currentPage }) => {
             <p className="text-xs text-gray-500">Next page</p>
             {!isLast && (
               <Link to={nextPageLink}>
-                <p className="block md:inline-block mt-4 md:mt-0 no-underline font-medium text-primary border-b-2 border-transparent hover:border-green-500">
+                <p className="block md:inline-block mt-4 md:mt-0 no-underline font-medium text-primary border-b-2 border-transparent hover:border-orange-400">
                   Page {nextPage} →
                 </p>
               </Link>

@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Starter Gatsby Blog`,
+    title: `Ptasie radio`,
     titleTemplate: "%s · Starter bolg",
     description: `Gatsby and Tailwindcss starter`,
     keywords: [`gatsby`, `tailwind`, `react`, `tailwindcss`],
@@ -28,8 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/blog`,
+        name: `data`,
+        path: `${__dirname}/data`,
       },
     },
     {
@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/`, `/blog/*`, `/about`],
+        precachePages: [`/`, `/radio/*`, `/about`],
       },
     },
     "gatsby-plugin-mdx",

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Layout from "../../components/core/layout";
-import Seo from "../../components/core/seo";
+import Layout from "../../components/core/layout.js";
+import Seo from "../../components/core/seo.js";
 import {
   Paragraf,
   H1,
@@ -28,7 +28,7 @@ const BlogPost = ({ data, children }) => {
             {data.mdx.frontmatter.title}
           </h1>
           <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">
-            {data.mdx.frontmatter.date}
+            {data.mdx.frontmatter.subtitle}
           </h2>
           <GatsbyImage
             image={image}
@@ -68,7 +68,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        subtitle
         hero_image_alt
         hero_image_credit_link
         hero_image_credit_text

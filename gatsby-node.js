@@ -32,11 +32,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const posts = result.data.allMdx.edges
 
     // Create blog-list pages
-    const postsPerPage = 2
+    const postsPerPage = 6
     const numPages = Math.ceil(posts.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        path: i === 0 ? `/radia` : `/radia/${i + 1}`,
         component: `${blogListTemplate}`,
         context: {
           limit: postsPerPage,

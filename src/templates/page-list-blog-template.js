@@ -3,8 +3,8 @@ import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import Layout from "../components/core/layout";
 import Seo from "../components/core/seo";
-import PostHeader from "../components/post-header";
 import PostListNavigation from "../components/post-list-navigation";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export const query = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
@@ -17,8 +17,15 @@ export const query = graphql`
             title
             subtitle
             slug
-            date
             tags
+            hero_image_alt
+            hero_image_credit_link
+            hero_image_credit_text
+            hero_image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
         }
       }
@@ -36,34 +43,36 @@ const PostListTemplate = ({
     <Layout>
       <div className="px-4">
         <div className="max-w-4xl bg-white dark:bg-black rounded-lg mx-auto my-8 p-16">
-          <h1 className="text-2xl font-medium text-primary mb-2">My blog</h1>
-          <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">
-            List of my blog posts
-          </h2>
-          <hr className="w-1/2 border-2 mb-4 border-blue-400" />
-          {edges.map((edge) => (
-            <div className="mt-8" key={edge.node.id}>
-              <PostHeader
-                title={edge.node.frontmatter.title}
-                subtitle={edge.node.frontmatter.subtitle}
-                date={edge.node.frontmatter.date}
-                tags={edge.node.frontmatter.tags}
-              />
+          <div class="text-center">
+            <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+              Radia
+            </h1>
 
-              <div className="text-primary">{edge.node.excerpt}</div>
+            <p class="max-w-lg mx-auto mt-4 text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            {edges.map((edge) => (
+              <Link to={"/radia/" + edge.node.frontmatter.slug}>
+                <div class="w-full max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                  <GatsbyImage
+                    image={getImage(edge.node.frontmatter.hero_image)}
+                    alt={edge.node.frontmatter.hero_image_alt}
+                  />
 
-              <div className="mt-4">
-                <button
-                  aria-label="Read post"
-                  className="bg-transparent hover:bg-blue-500 text-blue-700 dark:text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4 mt-2"
-                >
-                  <Link to={"/blog/" + edge.node.frontmatter.slug}>
-                    Read more
-                  </Link>
-                </button>
-              </div>
-            </div>
-          ))}
+                  <div class="py-5 text-center">
+                    <span class="block text-xl font-bold text-gray-800 dark:text-white">
+                      {edge.node.frontmatter.title}
+                    </span>
+                    <span class="text-sm text-gray-700 dark:text-gray-200">
+                      {edge.node.frontmatter.subtitle}
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
 
           <div>
             <PostListNavigation numPages={numPages} currentPage={currentPage} />
