@@ -65,7 +65,7 @@ const BlogPost = ({ data, children }) => {
 
 export const query = graphql`
 query ($id: String) {
-  mdx(id: {eq: $id}, frontmatter: {category: {eq: "radia"}}) {
+  mdx(id: {eq: $id}, frontmatter: {category: {eq: "lampy"}}) {
     frontmatter {
       title
       subtitle

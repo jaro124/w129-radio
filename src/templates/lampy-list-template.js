@@ -18,7 +18,6 @@ export const query = graphql`
             subtitle
             slug
             tags
-            category
             hero_image_alt
             hero_image_credit_link
             hero_image_credit_text
@@ -34,19 +33,19 @@ export const query = graphql`
   }
 `;
 
-const PostListTemplate = ({
+const LampyListTemplate = ({
   data,
   pageContext, // this prop will be injected by the GraphQL query below.
 }) => {
-  const { edges } = data.allMdx
-  const { numPages, currentPage } = pageContext
+  const { edges } = data.allMdx;
+  const { LampyNumPages, LampyPerPage } = pageContext;
   return (
     <Layout>
       <div className="px-4">
         <div className="max-w-4xl bg-white dark:bg-black rounded-lg mx-auto my-8 p-8">
           <div className="text-center">
             <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-              Radia
+              Lampy
             </h1>
             <p className="max-w-lg mx-auto mt-4 text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -54,7 +53,7 @@ const PostListTemplate = ({
           </div>
           <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
             {edges.map((edge) => (
-              <Link to={"/" + edge.node.frontmatter.category + "/" + edge.node.frontmatter.slug}>
+              <Link to={"/radia/" + edge.node.frontmatter.slug}>
                 <div className="w-full max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl border dark:border-gray-800 hover:border-gray-200 dark:hover:border-gray-500">
                   <GatsbyImage
                     image={getImage(edge.node.frontmatter.hero_image)}
@@ -85,7 +84,7 @@ const PostListTemplate = ({
           </div>
 
           <div>
-            <PostListNavigation numPages={numPages} currentPage={currentPage} />
+            <PostListNavigation numPages={LampyNumPages} currentPage={currentPage} />
           </div>
         </div>
       </div>
@@ -93,12 +92,12 @@ const PostListTemplate = ({
   );
 };
 
-export default PostListTemplate;
+export default LampyListTemplate;
 
 export const Head = () => (
   <Seo
-    title="List posts page"
-    description="List posts page"
+    title="List lampy page"
+    description="List lampy page"
     keywords={["Blog", "Post"]}
   />
 );
