@@ -7,12 +7,11 @@ import PostListNavigation from "../components/post-list-navigation";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export const query = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
-    allMdx(sort: { frontmatter: { date: DESC } }, limit: $limit, skip: $skip) {
+  query blogListQuery($skip: Int!, $limit: Int!, $category: String!) {
+    allMdx(filter: {frontmatter: {category: {eq: $category}}}, sort: { frontmatter: { date: DESC } }, limit: $limit, skip: $skip) {
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
           frontmatter {
             title
             subtitle
@@ -20,8 +19,6 @@ export const query = graphql`
             tags
             category
             hero_image_alt
-            hero_image_credit_link
-            hero_image_credit_text
             hero_image {
               childImageSharp {
                 gatsbyImageData
@@ -34,19 +31,19 @@ export const query = graphql`
   }
 `;
 
-const PostListTemplate = ({
+const RadiaListTemplate = ({
   data,
   pageContext, // this prop will be injected by the GraphQL query below.
 }) => {
   const { edges } = data.allMdx
-  const { numPages, currentPage } = pageContext
+  const { numPages, currentPage, category } = pageContext
   return (
     <Layout>
       <div className="px-4">
         <div className="max-w-4xl bg-white dark:bg-black rounded-lg mx-auto my-8 p-8">
           <div className="text-center">
-            <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-              Radia
+            <h1 className="text-2xl font-semibold text-gray-800 uppercase underline decoration-orange-400 lg:text-3xl dark:text-white">
+              {category}
             </h1>
             <p className="max-w-lg mx-auto mt-4 text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -85,7 +82,7 @@ const PostListTemplate = ({
           </div>
 
           <div>
-            <PostListNavigation numPages={numPages} currentPage={currentPage} />
+            <PostListNavigation numPages={numPages} currentPage={currentPage} category={category} />
           </div>
         </div>
       </div>
@@ -93,7 +90,7 @@ const PostListTemplate = ({
   );
 };
 
-export default PostListTemplate;
+export default RadiaListTemplate;
 
 export const Head = () => (
   <Seo

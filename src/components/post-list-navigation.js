@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const PostListNavigation = ({ numPages, currentPage }) => {
+const PostListNavigation = ({ numPages, currentPage, category }) => {
+  const preLink = "/" + category + "/"
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
   const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString();
   const nextPage = (currentPage + 1).toString();
-  const prevPageLink = "/radia/" + prevPage;
-  const nextPageLink = "/radia/" + nextPage;
+  const prevPageLink = preLink + prevPage;
+  const nextPageLink = preLink + nextPage;
   return (
     <div>
       <div>

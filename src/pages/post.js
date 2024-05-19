@@ -12,7 +12,7 @@ const PostPage = () => {
         
         
         
-        <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3 justify-end hover:shadow-2xl bg-orange-400 dark:bg-gray-800 dark:border-gray-800 font-light">
+        <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3 underline decoration-orange-400 justify-end hover:shadow-2xl bg-orange-400 dark:bg-gray-800 dark:border-gray-800 font-light">
           <div>01</div>
           <div>02</div>
           <div>03</div>

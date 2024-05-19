@@ -37,7 +37,7 @@ const BlogPost = ({ data, children }) => {
                 <p>
         Photo Credit:{" "}
         <a href={data.mdx.frontmatter.hero_image_credit_link}>
-          {data.mdx.frontmatter.hero_image_credit_text}
+          {data.mdx.frontmatter.hero_image_author}
         </a>
       </p>
       <MDXProvider
@@ -70,8 +70,7 @@ query ($id: String) {
       title
       subtitle
       hero_image_alt
-      hero_image_credit_link
-      hero_image_credit_text
+      hero_image_author
       hero_image {
         childImageSharp {
           gatsbyImageData
