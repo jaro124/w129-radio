@@ -7,10 +7,10 @@ const Footer = ({ siteTitle }) => (
     <div className="flex flex-wrap bg-white dark:bg-black text-black dark:text-gray-400">
       <div className="w-full md:w-1/3 p-4">
         <p className="text-xs pb-2">Contact:</p>
-        <p>Company: w129</p>
-        <p>Address: Vermont Hills IL 60061</p>
-        <p>Phone: (841) 6553228</p>
-        <p>E-mail: info(at)server.com</p>
+        <p>Company: Pentoda - radiotechnika z dawnych lat </p>
+        <p>Address: Łódź</p>
+        <p>Phone: (48) 697 790 978</p>
+        <p>E-mail: pentoda.radio@gmail.com</p>
         
       </div>
       <div className="w-full md:w-1/3 bg-white dark:bg-black text-black dark:text-gray-400 p-4">
@@ -71,11 +71,11 @@ const Footer = ({ siteTitle }) => (
             },
             {
               route: `/category`,
-              title: `Kategorie`
+              title: `Eksponaty`
             },
             {
               route: `/about`,
-              title: `About`
+              title: `O nas`
             }
           ].map(link => (
             <Link

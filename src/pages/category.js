@@ -9,13 +9,10 @@ const CategoryList = () => {
     <Layout>
       <div className="px-4">
         <div className="max-w-4xl bg-white dark:bg-black rounded-lg mx-auto my-8 p-8">
-          <div className="text-center">
+          <div className="text-center mb-8">
             <h1 className="text-2xl font-semibold text-gray-800 uppercase underline decoration-orange-400 lg:text-3xl dark:text-white">
               Kategorie eksponatów
             </h1>
-            <p className="max-w-lg mx-auto mt-4 text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
           </div>
 
           <Link to={"/radia"}>
@@ -36,8 +33,24 @@ const CategoryList = () => {
                     radia
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                    Lorem ipsum
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Illum illo cupiditate molestias atque consequuntur ea quo
+                    cumque, odit velit sint similique? Asperiores ratione
+                    aperiam tempora, alias corrupti deleniti quaerat molestiae.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   </p>
+                  <div className="bg-white dark:bg-gray-800 pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
+                    <div className="ml-2">
+                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
+                        66
+                      </span>
+                    </div>
+                    <div className="ml-2">
+                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
+                        Polska
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -61,8 +74,24 @@ const CategoryList = () => {
                     czasopisma radiowe
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                    Lorem ipsum
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Illum illo cupiditate molestias atque consequuntur ea quo
+                    cumque, odit velit sint similique? Asperiores ratione
+                    aperiam tempora, alias corrupti deleniti quaerat molestiae.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   </p>
+                  <div className="bg-white dark:bg-gray-800 pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
+                    <div className="ml-2">
+                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
+                        54
+                      </span>
+                    </div>
+                    <div className="ml-2">
+                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
+                        Polska
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -80,19 +109,34 @@ const CategoryList = () => {
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    lampy
+                    Lampy
                   </h2>
                   <h3 className="text-indigo-700 dark:text-indigo-300 font-semibold">
                     lampy radiowe
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                    Lorem ipsum
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Illum illo cupiditate molestias atque consequuntur ea quo
+                    cumque, odit velit sint similique? Asperiores ratione
+                    aperiam tempora, alias corrupti deleniti quaerat molestiae.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   </p>
+                  <div className="bg-white dark:bg-gray-800 pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
+                    <div className="ml-2">
+                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
+                        125
+                      </span>
+                    </div>
+                    <div className="ml-2">
+                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
+                        Polska
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </Link>          
-
+          </Link>
         </div>
       </div>
     </Layout>
