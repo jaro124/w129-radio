@@ -52,8 +52,8 @@ function Header() {
               title: `Home`,
             },
             {
-              route: `/radia`,
-              title: `Radia`,
+              route: `/category`,
+              title: `Kategorie`,
             },
             {
               route: `/about`,

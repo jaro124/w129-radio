@@ -70,8 +70,8 @@ const Footer = ({ siteTitle }) => (
               title: `Home`
             },
             {
-              route: `/radia`,
-              title: `Radia`
+              route: `/category`,
+              title: `Kategorie`
             },
             {
               route: `/about`,
