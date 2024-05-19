@@ -1,4 +1,7 @@
-const path = require(`path`)
+
+
+const path = require(`path`);
+const userConfig = require('./config.js');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
  
@@ -8,6 +11,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   
     const { createPage } = actions;
     
+    console.log(userConfig.categories)
+
     const result = await graphql(`
     query MyQuery {
       allMdx (sort: {frontmatter: {date: DESC}}) {
@@ -38,7 +43,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const radia = result.data.allMdx.edges.filter(edge => edge.node.frontmatter.category === "radia")
 
     // Items per page
-    const itemsPerPage = 3
+    const itemsPerPage = userConfig.ITEMS_PER_PAGE
 
     // Create radia list pages
     const radiaNumPages = Math.ceil(radia.length / itemsPerPage)
