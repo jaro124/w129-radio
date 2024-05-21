@@ -5,22 +5,25 @@ const categories = [
         name: "czasopisma",
         title: "Czasopisma",
         subTitle: "Czasopisma radiowe",
-        description: "Czasopisma polskie i nie tylko, dotyczące tematyki radiowej.",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum illo cupiditate molestias atque consequuntur ea quo cumque, odit velit sint similique? Asperiores ratione       aperiam tempora, alias corrupti deleniti quaerat molestiae. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
         template: "./src/templates/radia-list-template.js",
+        image: "../images/category-czasopisma.jpg",
     },
     {
         name: "lampy",
         title: "Lampy",
         subTitle: "Opisy lamp radiowych",
-        description: "Lampy radiowe w wersjach oryginalnych i zamienniki.",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum illo cupiditate molestias atque consequuntur ea quo cumque, odit velit sint similique? Asperiores ratione       aperiam tempora, alias corrupti deleniti quaerat molestiae. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
         template: "./src/templates/radia-list-template.js",
+        image: "../images/category-lampy.jpg",
     },
     {
         name: "radia",
         title: "Radia",
         subTitle: "Eksponaty radiowe",
-        description: "Polskie i nie tylko odbiorniki radiowe z charakterem.",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum illo cupiditate molestias atque consequuntur ea quo cumque, odit velit sint similique? Asperiores ratione       aperiam tempora, alias corrupti deleniti quaerat molestiae. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
         template: "./src/templates/radia-list-template.js",
+        image: "../images/category-radia.jpg",
     },
 ]
 

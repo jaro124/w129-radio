@@ -11,38 +11,38 @@ const AboutPage = () => {
 
 
       <section>
-  <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
-      <div class="relative z-10 lg:py-16">
-        <div class="relative h-64 sm:h-80 lg:h-full">
+  <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
+      <div className="relative z-10 lg:py-16">
+        <div className="relative h-64 sm:h-80 lg:h-full">
           <StaticImage
             alt="Pentoda - radiotechnika z dawnych lat"
             src="../images/pentoda-zalozyciele.jpg"
-            class="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-top"
           />
         </div>
       </div>
 
-      <div class="relative flex items-center bg-gray-100 dark:bg-slate-800">
+      <div className="relative flex items-center bg-gray-100 dark:bg-slate-800">
         <span
-          class="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100 dark:bg-slate-800"
+          className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100 dark:bg-slate-800"
         ></span>
 
-        <div class="p-8 sm:p-16 lg:p-24">
-          <h2 class="text-2xl font-bold sm:text-3xl">
+        <div className="p-8 sm:p-16 lg:p-24">
+          <h2 className="text-2xl font-bold sm:text-3xl">
             Pentoda - radiotechnika z dawnych lat
           </h2>
 
-          <p class="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-600">
           Celem organizacji jest gromadzenie, renowacja oraz dokumentowanie zabytkowych radioodbiorników oraz innego sprzętu radiotechnicznego.
           </p>
-          <p class="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-600">
           Łódź ...
           </p>
-          <p class="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-600">
           NIP: 7262703226
           </p>
-          <p class="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-600">
           REGON: 527492966
           </p>
 

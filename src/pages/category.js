@@ -4,7 +4,12 @@ import Layout from "../components/core/layout";
 import Seo from "../components/core/seo";
 import { StaticImage } from "gatsby-plugin-image";
 
+const userConfig = require("../../config.js");
+
 const CategoryList = () => {
+  const czasopismaImage = "../images/category-czasopisma.jpg"
+  const lampyImage = "../images/category-lampy.jpg"
+  const radiaImage = "../images/category-radia.jpg"
   return (
     <Layout>
       <div className="px-4">
@@ -15,29 +20,25 @@ const CategoryList = () => {
             </h1>
           </div>
 
-          <Link to={"/radia"}>
+          <Link to={"/" + userConfig.categories[0].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt="Kategoria radia"
-                    src="../images/category-radia.jpg"
+                    alt={userConfig.categories[0].subTitle}
+                    src={czasopismaImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    Radia
+                    {userConfig.categories[0].title}
                   </h2>
                   <h3 className="text-indigo-700 dark:text-indigo-300 font-semibold">
-                    radia
+                  {userConfig.categories[0].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Illum illo cupiditate molestias atque consequuntur ea quo
-                    cumque, odit velit sint similique? Asperiores ratione
-                    aperiam tempora, alias corrupti deleniti quaerat molestiae.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  {userConfig.categories[0].description}
                   </p>
                   <div className="bg-white dark:bg-gray-800 pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
@@ -56,34 +57,30 @@ const CategoryList = () => {
             </div>
           </Link>
 
-          <Link to={"/czasopisma"}>
+          <Link to={"/" + userConfig.categories[1].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt="Kategoria czasopisma"
-                    src="../images/category-czasopisma.jpg"
+                    alt={userConfig.categories[1].subTitle}
+                    src={lampyImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    Czasopisma
+                    {userConfig.categories[1].title}
                   </h2>
                   <h3 className="text-indigo-700 dark:text-indigo-300 font-semibold">
-                    czasopisma radiowe
+                  {userConfig.categories[1].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Illum illo cupiditate molestias atque consequuntur ea quo
-                    cumque, odit velit sint similique? Asperiores ratione
-                    aperiam tempora, alias corrupti deleniti quaerat molestiae.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  {userConfig.categories[1].description}
                   </p>
                   <div className="bg-white dark:bg-gray-800 pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        54
+                        66
                       </span>
                     </div>
                     <div className="ml-2">
@@ -97,34 +94,30 @@ const CategoryList = () => {
             </div>
           </Link>
 
-          <Link to={"/lampy"}>
+          <Link to={"/" + userConfig.categories[2].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt="Kategoria lampy"
-                    src="../images/category-lampy.jpg"
+                    alt={userConfig.categories[2].subTitle}
+                    src={radiaImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    Lampy
+                    {userConfig.categories[2].title}
                   </h2>
                   <h3 className="text-indigo-700 dark:text-indigo-300 font-semibold">
-                    lampy radiowe
+                  {userConfig.categories[2].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Illum illo cupiditate molestias atque consequuntur ea quo
-                    cumque, odit velit sint similique? Asperiores ratione
-                    aperiam tempora, alias corrupti deleniti quaerat molestiae.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  {userConfig.categories[2].description}
                   </p>
                   <div className="bg-white dark:bg-gray-800 pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        125
+                        66
                       </span>
                     </div>
                     <div className="ml-2">
@@ -137,6 +130,7 @@ const CategoryList = () => {
               </div>
             </div>
           </Link>
+
         </div>
       </div>
     </Layout>
