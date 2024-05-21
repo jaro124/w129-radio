@@ -36,17 +36,17 @@ const RadiaListTemplate = ({
   pageContext, // this prop will be injected by the GraphQL query below.
 }) => {
   const { edges } = data.allMdx
-  const { numPages, currentPage, category } = pageContext
+  const { numPages, currentPage, category, title, subTitle } = pageContext
   return (
     <Layout>
       <div className="px-4">
         <div className="max-w-4xl bg-white dark:bg-black rounded-lg mx-auto my-8 p-8">
           <div className="text-center">
             <h1 className="text-2xl font-semibold text-gray-800 uppercase underline decoration-orange-400 lg:text-3xl dark:text-white">
-              {category}
+              {title}
             </h1>
             <p className="max-w-lg mx-auto mt-4 text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              {subTitle}
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">

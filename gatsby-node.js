@@ -1,21 +1,12 @@
-
-
 const path = require(`path`);
-const userConfig = require('./config.js');
+const userConfig = require("./config.js");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
- 
-  const radiaListTemplate = path.resolve(`./src/templates/radia-list-template.js`)
-  const czasopismaListTemplate = path.resolve(`./src/templates/radia-list-template.js`)
-  const lampyListTemplate = path.resolve(`./src/templates/radia-list-template.js`)
-  
-    const { createPage } = actions;
-    
-    console.log(userConfig.categories)
+  const { createPage } = actions;
 
-    const result = await graphql(`
+  const result = await graphql(`
     query MyQuery {
-      allMdx (sort: {frontmatter: {date: DESC}}) {
+      allMdx(sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
             frontmatter {
@@ -31,65 +22,37 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
     }
-    `);
+  `);
 
-    if (result.errors) {
-        reporter.panicOnBuild('Error loading MDX result', result.errors)
-    }
-  
-    const all = result.data.allMdx.edges
-    const lampy = result.data.allMdx.edges.filter(edge => edge.node.frontmatter.category === "lampy")
-    const czasopisma = result.data.allMdx.edges.filter(edge => edge.node.frontmatter.category === "czasopisma")
-    const radia = result.data.allMdx.edges.filter(edge => edge.node.frontmatter.category === "radia")
+  if (result.errors) {
+    reporter.panicOnBuild("Error loading MDX result", result.errors);
+  }
 
-    // Items per page
-    const itemsPerPage = userConfig.ITEMS_PER_PAGE
+  // Items per page
+  const itemsPerPage = userConfig.ITEMS_PER_PAGE;
 
-    // Create radia list pages
-    const radiaNumPages = Math.ceil(radia.length / itemsPerPage)
-    Array.from({ length: radiaNumPages }).forEach((_, i) => {
+  // Generate list pages for categories
+  userConfig.categories.map((category) => {
+    var listData = result.data.allMdx.edges.filter(
+      (edge) => edge.node.frontmatter.category === category.name
+    );
+    var listDataTemplate = path.resolve(category.template);
+    var listDataNumPages = Math.ceil(listData.length / itemsPerPage);
+
+    Array.from({ length: listDataNumPages }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `/radia` : `/radia/${i + 1}`,
-        component: radiaListTemplate,
+        path: i === 0 ? `/` + category.name : `/` + category.name + `/${i + 1}`,
+        component: listDataTemplate,
         context: {
           limit: itemsPerPage,
           skip: i * itemsPerPage,
-          numPages: radiaNumPages,
+          numPages: listDataNumPages,
           currentPage: i + 1,
-          category: "radia",
+          category: category.name,
+          title: category.title,
+          subTitle: category.subTitle,
         },
-      })
-    })
-
-    // Create czasopisma list pages
-    const czasopismaNumPages = Math.ceil(czasopisma.length / itemsPerPage)
-    Array.from({ length: czasopismaNumPages }).forEach((_, i) => {
-      createPage({
-        path: i === 0 ? `/czasopisma` : `/czasopisma/${i + 1}`,
-        component: czasopismaListTemplate,
-        context: {
-          limit: itemsPerPage,
-          skip: i * itemsPerPage,
-          numPages: czasopismaNumPages,
-          currentPage: i + 1,
-          category: "czasopisma",
-        },
-      })
-    })
-    
-    // Create lampy list pages
-    const lampyNumPages = Math.ceil(lampy.length / itemsPerPage)
-    Array.from({ length: lampyNumPages }).forEach((_, i) => {
-      createPage({
-        path: i === 0 ? `/lampy` : `/lampy/${i + 1}`,
-        component: lampyListTemplate,
-        context: {
-          limit: itemsPerPage,
-          skip: i * itemsPerPage,
-          numPages: lampyNumPages,
-          currentPage: i + 1,
-          category: "lampy",
-        },
-      })
-    })    
+      });
+    });
+  });
 };
