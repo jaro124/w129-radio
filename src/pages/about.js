@@ -33,16 +33,16 @@ const AboutPage = () => {
             Pentoda - radiotechnika z dawnych lat
           </h2>
 
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-500">
           Celem organizacji jest gromadzenie, renowacja oraz dokumentowanie zabytkowych radioodbiorników oraz innego sprzętu radiotechnicznego.
           </p>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-500">
           Łódź ...
           </p>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-500">
           NIP: 7262703226
           </p>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-gray-500">
           REGON: 527492966
           </p>
 
@@ -59,7 +59,7 @@ const AboutPage = () => {
           <h1 className="text-2xl font-medium text-black dark:text-gray-400 mb-2">
             About me
           </h1>
-          <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">
+          <h2 className="font-medium text-sm text-orange-400 mb-4 uppercase tracking-wide">
             A few words about me
           </h2>
           <p className="text-primary">
@@ -76,16 +76,10 @@ const AboutPage = () => {
           </p>
           <div className="mt-4">
             <button
-              aria-label="Articles"
-              className="bg-blue-400 hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4 mt-2"
+              aria-label="Eksponaty"
+              className="bg-orange-400 hover:bg-orange-500 text-black font-semibold py-2 px-4 border border-orange-500 hover:border-transparent rounded"
             >
-              <Link to="/blog">Articles</Link>
-            </button>
-            <button
-              aria-label="Back to home page"
-              className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-4 mt-2"
-            >
-              <Link to="/">Back to home page</Link>
+              <Link to="/category">Kategorie eksponatów</Link>
             </button>
           </div>
         </div>

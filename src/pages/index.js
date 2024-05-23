@@ -18,10 +18,10 @@ const IndexPage = () => {
         </div>
         <div className="max-w-4xl bg-white dark:bg-black rounded-lg mx-auto my-8 p-16">
           <h1 className="text-2xl text-black dark:text-gray-400 font-medium mb-2">
-            Let's Build: With Tailwind CSS
+            Radiotechnika z dawnych lat
           </h1>
-          <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">
-            Tailwind CSS
+          <h2 className="font-medium text-sm text-orange-400 mb-4 uppercase tracking-wide">
+            Pentoda
           </h2>
           <p className="text-primary">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum illo
@@ -32,9 +32,9 @@ const IndexPage = () => {
           <div className="mt-4">
             <button
               aria-label="Read more"
-              className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+              className="bg-orange-400 hover:bg-orange-500 text-black font-semibold py-2 px-4 border border-orange-500 hover:border-transparent rounded"
             >
-              <Link to="/post">Read more</Link>
+              <Link to="/about">Read more</Link>
             </button>
           </div>
 

@@ -77,7 +77,7 @@ const CategoryList = () => {
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
                   {userConfig.categories[1].description}
                   </p>
-                  <div className="bg-white dark:bg-gray-800 pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
+                  <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
                         66
@@ -114,7 +114,7 @@ const CategoryList = () => {
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
                   {userConfig.categories[2].description}
                   </p>
-                  <div className="bg-white dark:bg-gray-800 pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
+                  <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
                         66
