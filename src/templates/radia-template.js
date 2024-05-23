@@ -1,8 +1,8 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Layout from "../../components/core/layout.js";
-import Seo from "../../components/core/seo.js";
+import Layout from "../components/core/layout.js";
+import Seo from "../components/core/seo.js";
 import {
   Paragraf,
   H1,
@@ -15,8 +15,26 @@ import {
   DiscList,
   MyBlockquote,
   MyPRE,
-} from "../../components/core/layout-mdx.js";
+} from "../components/core/layout-mdx.js";
 import { MDXProvider } from "@mdx-js/react";
+
+export const query = graphql`
+  query ($id: String!, $category: String!) {
+    mdx(id: { eq: $id }, frontmatter: { category: { eq: $category } }) {
+      frontmatter {
+        title
+        subtitle
+        hero_image_alt
+        hero_image_author
+        hero_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`;
 
 const BlogPost = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
@@ -34,52 +52,29 @@ const BlogPost = ({ data, children }) => {
             image={image}
             alt={data.mdx.frontmatter.hero_image_alt}
           />
-                <p>
-        Photo Credit:{" "}
-        <a href={data.mdx.frontmatter.hero_image_credit_link}>
-          {data.mdx.frontmatter.hero_image_author}
-        </a>
-      </p>
-      <MDXProvider
-              components={{
-                p: Paragraf,
-                h1: H1,
-                h2: H2,
-                h3: H3,
-                h4: H4,
-                h5: H5,
-                h6: H6,
-                ol: NumberedList,
-                ul: DiscList,
-                blockquote: MyBlockquote,
-                pre: MyPRE,
-              }}
-            >
-              {children}
-            </MDXProvider>
+          <p>Autor: {data.mdx.frontmatter.hero_image_author}</p>
+          <MDXProvider
+            components={{
+              p: Paragraf,
+              h1: H1,
+              h2: H2,
+              h3: H3,
+              h4: H4,
+              h5: H5,
+              h6: H6,
+              ol: NumberedList,
+              ul: DiscList,
+              blockquote: MyBlockquote,
+              pre: MyPRE,
+            }}
+          >
+            {children}
+          </MDXProvider>
         </div>
       </div>
     </Layout>
   );
 };
-
-export const query = graphql`
-query ($id: String) {
-  mdx(id: {eq: $id}, frontmatter: {category: {eq: "radia"}}) {
-    frontmatter {
-      title
-      subtitle
-      hero_image_alt
-      hero_image_author
-      hero_image {
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
-    }
-  }
-}
-`;
 
 export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />;
 

@@ -31,13 +31,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Items per page
   const itemsPerPage = userConfig.ITEMS_PER_PAGE;
 
-  // Generate list pages for categories
+  // Generate list and  pages for categories
   userConfig.categories.map((category) => {
     var listData = result.data.allMdx.edges.filter(
       (edge) => edge.node.frontmatter.category === category.name
     );
-    var listDataTemplate = path.resolve(category.template);
+    var pageDataTemplate = path.resolve(category.pageTemplate);
+    var listDataTemplate = path.resolve(category.listTemplate);
     var listDataNumPages = Math.ceil(listData.length / itemsPerPage);
+
+    listData.forEach(edge => {
+      createPage({
+        path: `/` + category.name + `/` + `${edge.node.frontmatter.slug}`,
+        component: `${pageDataTemplate}?__contentFilePath=${edge.node.internal.contentFilePath}`,
+        context: {
+          category: edge.node.frontmatter.category,
+          id: edge.node.id
+        },
+      })
+    })
 
     Array.from({ length: listDataNumPages }).forEach((_, i) => {
       createPage({

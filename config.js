@@ -6,7 +6,8 @@ const categories = [
         title: "Czasopisma",
         subTitle: "Czasopisma radiowe",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum illo cupiditate molestias atque consequuntur ea quo cumque, odit velit sint similique? Asperiores ratione       aperiam tempora, alias corrupti deleniti quaerat molestiae. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-        template: "./src/templates/radia-list-template.js",
+        pageTemplate: "./src/templates/radia-template.js",
+        listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-czasopisma.jpg",
     },
     {
@@ -14,7 +15,8 @@ const categories = [
         title: "Lampy",
         subTitle: "Opisy lamp radiowych",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum illo cupiditate molestias atque consequuntur ea quo cumque, odit velit sint similique? Asperiores ratione       aperiam tempora, alias corrupti deleniti quaerat molestiae. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-        template: "./src/templates/radia-list-template.js",
+        pageTemplate: "./src/templates/radia-template.js",
+        listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-lampy.jpg",
     },
     {
@@ -22,7 +24,8 @@ const categories = [
         title: "Radia",
         subTitle: "Eksponaty radiowe",
         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum illo cupiditate molestias atque consequuntur ea quo cumque, odit velit sint similique? Asperiores ratione       aperiam tempora, alias corrupti deleniti quaerat molestiae. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-        template: "./src/templates/radia-list-template.js",
+        pageTemplate: "./src/templates/radia-template.js",
+        listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-radia.jpg",
     },
 ]
