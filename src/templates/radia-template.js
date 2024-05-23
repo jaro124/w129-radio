@@ -5,6 +5,7 @@ import Layout from "../components/core/layout.js";
 import Seo from "../components/core/seo.js";
 import {
   Paragraf,
+  Link,
   H1,
   H2,
   H3,
@@ -45,7 +46,7 @@ const BlogPost = ({ data, children }) => {
           <h1 className="text-2xl font-medium text-black dark:text-gray-400 mb-2">
             {data.mdx.frontmatter.title}
           </h1>
-          <h2 className="font-medium text-sm text-indigo-400 mb-4 uppercase tracking-wide">
+          <h2 className="font-medium text-sm text-orange-400 mb-4 uppercase tracking-wide">
             {data.mdx.frontmatter.subtitle}
           </h2>
           <GatsbyImage
@@ -56,6 +57,7 @@ const BlogPost = ({ data, children }) => {
           <MDXProvider
             components={{
               p: Paragraf,
+              a: Link,
               h1: H1,
               h2: H2,
               h3: H3,

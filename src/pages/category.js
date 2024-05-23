@@ -34,13 +34,13 @@ const CategoryList = () => {
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
                     {userConfig.categories[0].title}
                   </h2>
-                  <h3 className="text-indigo-700 dark:text-indigo-300 font-semibold">
+                  <h3 className="text-orange-500 dark:text-orange-300 font-semibold">
                   {userConfig.categories[0].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
                   {userConfig.categories[0].description}
                   </p>
-                  <div className="bg-white dark:bg-gray-800 pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
+                  <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
                         66
@@ -71,7 +71,7 @@ const CategoryList = () => {
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
                     {userConfig.categories[1].title}
                   </h2>
-                  <h3 className="text-indigo-700 dark:text-indigo-300 font-semibold">
+                  <h3 className="text-orange-500 dark:text-orange-300 font-semibold">
                   {userConfig.categories[1].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
@@ -108,7 +108,7 @@ const CategoryList = () => {
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
                     {userConfig.categories[2].title}
                   </h2>
-                  <h3 className="text-indigo-700 dark:text-indigo-300 font-semibold">
+                  <h3 className="text-orange-500 dark:text-orange-300 font-semibold">
                   {userConfig.categories[2].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">

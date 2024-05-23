@@ -8,7 +8,7 @@ const PostPage = () => {
   console.log(data)
   return (
     <Layout pageTitle="Blog Page">
-      <div className="px-4">
+      <div className="px-4 text-orange-400 bg-slate-700">
         
         
         
@@ -20,6 +20,10 @@ const PostPage = () => {
           <div>05</div>
         </div>
         
+
+
+
+
         <div className="ml-2">
                           <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-gray-800 rounded-full">
                             gatsbydddfsds

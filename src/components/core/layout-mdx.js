@@ -8,6 +8,12 @@ export const Paragraf = ({ children }) => (
     </p>
 );
 
+export const Link = ({ href, children }) => (
+  <a href={href} className="no-underline font-medium text-black dark:text-gray-400 border-b-2 border-transparent hover:border-orange-400">
+      {children}
+  </a>
+);
+
 export const H1 = ({ children }) => (
     <h1 className="text-4xl font-medium mb-2">
         {children}

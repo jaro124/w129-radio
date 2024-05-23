@@ -45,7 +45,7 @@ const RadiaListTemplate = ({
             <h1 className="text-2xl font-semibold text-gray-800 uppercase underline decoration-orange-400 lg:text-3xl dark:text-white">
               {title}
             </h1>
-            <p className="max-w-lg mx-auto mt-4 text-gray-500">
+            <p className="max-w-lg mx-auto mt-4 text-orange-400">
               {subTitle}
             </p>
           </div>
