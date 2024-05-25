@@ -9,8 +9,8 @@ const Footer = ({ siteTitle }) => (
         <p className="text-xs pb-2">Contact:</p>
         <p>Company: Pentoda - radiotechnika z dawnych lat </p>
         <p>Address: Łódź</p>
-        <p>Phone: (48) 697 790 978</p>
-        <p>E-mail: pentoda.radio@gmail.com</p>
+        <p>Phone: 42424242</p>
+        <p>E-mail: pentoda(@)dot.com</p>
         
       </div>
       <div className="w-full md:w-1/3 bg-white dark:bg-black text-black dark:text-gray-400 p-4">
@@ -99,7 +99,7 @@ const Footer = ({ siteTitle }) => (
     
 
     <div className="w-full text-center p-8 bg-white dark:bg-black text-black dark:text-gray-400">
-      © {new Date().getFullYear()}, made by {siteTitle}
+      © {new Date().getFullYear()}, made by w129
     </div>  
 
   </footer>

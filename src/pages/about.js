@@ -37,13 +37,16 @@ const AboutPage = () => {
           Celem organizacji jest gromadzenie, renowacja oraz dokumentowanie zabytkowych radioodbiorników oraz innego sprzętu radiotechnicznego.
           </p>
           <p className="mt-4 text-gray-500">
-          Łódź ...
+          Adres: Łódź ...
           </p>
           <p className="mt-4 text-gray-500">
-          NIP: 7262703226
+          Telefon: 42424242
           </p>
           <p className="mt-4 text-gray-500">
-          REGON: 527492966
+          NIP: 777777777
+          </p>
+          <p className="mt-4 text-gray-500">
+          REGON: 88888888
           </p>
 
         </div>

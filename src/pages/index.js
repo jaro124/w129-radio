@@ -11,7 +11,7 @@ const IndexPage = () => {
         <Hero />
         <div className="flex justify-center mt-8">
           <div>
-            <h1 className="text-5xl font-bold text-center text-black dark:text-gray-400 mb-2 border-b-2 border-indigo-400">
+            <h1 className="text-2xl font-semibold text-gray-800 uppercase underline decoration-orange-400 lg:text-3xl dark:text-white">
               Information
             </h1>
           </div>
@@ -34,33 +34,10 @@ const IndexPage = () => {
               aria-label="Read more"
               className="bg-orange-400 hover:bg-orange-500 text-black font-semibold py-2 px-4 border border-orange-500 hover:border-transparent rounded"
             >
-              <Link to="/about">Read more</Link>
+              <Link to="/about">Zobacz więcej</Link>
             </button>
           </div>
 
-          <div className="py-5">
-            <span className="inline-block bg-indigo-400 rounded-full px-3 py-1 text-xs font-semibold text-black mr-2 mt-2">
-              #gatsby
-            </span>
-            <span className="inline-block bg-indigo-400 rounded-full px-3 py-1 text-xs font-semibold text-black mr-2 mt-2">
-              #tailwind
-            </span>
-            <span className="inline-block bg-indigo-400 rounded-full px-3 py-1 text-xs font-semibold text-black mr-2 mt-2">
-              #tailwindcss
-            </span>
-            <span className="inline-block bg-red-400 rounded-full px-3 py-1 text-xs font-semibold text-black mr-2 mt-2">
-              #react
-            </span>
-            <span className="inline-block bg-indigo-400 rounded-full px-3 py-1 text-xs font-semibold text-black mr-2 mt-2">
-              #framework
-            </span>
-            <span className="inline-block bg-green-400 rounded-full px-3 py-1 text-xs font-semibold text-black mr-2 mt-2">
-              #develop
-            </span>
-            <span className="inline-block bg-indigo-400 rounded-full px-3 py-1 text-xs font-semibold text-black mr-2 mt-2">
-              #design
-            </span>
-          </div>
         </div>
       </div>
     </Layout>
