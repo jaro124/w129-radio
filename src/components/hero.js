@@ -11,7 +11,7 @@ const Hero = () => {
           <h1 className="text-5xl font-bold text-black dark:text-gray-400 mb-2">
             Etiuda
           </h1>
-          <h2 className="text-xl font-medium text-orange-400 mb-4 uppercase tracking-wide">
+          <h2 className="text-xl font-medium text-orange-500 mb-4 uppercase tracking-wide">
             Unikalna Etiuda z 1965 roku
           </h2>
 

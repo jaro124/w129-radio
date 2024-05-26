@@ -22,6 +22,7 @@ const Seo = ({ title, description, keywords, pathname, children }) => {
 
   return (
     <>
+      <html lang="pl-PL" />
       <title>{seo.title}</title>
       <link rel="shortcut icon" type="image/png" href="/images/icon.png"></link>
       <meta name="description" content={seo.description} />

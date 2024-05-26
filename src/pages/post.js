@@ -8,7 +8,7 @@ const PostPage = () => {
   console.log(data)
   return (
     <Layout pageTitle="Blog Page">
-      <div className="px-4 text-orange-400 bg-slate-700 mb-6">
+      <div className="px-4 text-orange-700 bg-slate-700 mb-6">
         
         
         

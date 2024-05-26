@@ -62,7 +62,7 @@ const AboutPage = () => {
           <h1 className="text-2xl font-medium text-black dark:text-gray-400 mb-2">
             About me
           </h1>
-          <h2 className="font-medium text-sm text-orange-400 mb-4 uppercase tracking-wide">
+          <h2 className="font-medium text-sm text-orange-500 mb-4 uppercase tracking-wide">
             A few words about me
           </h2>
           <p className="text-primary">

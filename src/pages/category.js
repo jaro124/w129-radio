@@ -34,7 +34,7 @@ const CategoryList = () => {
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
                     {userConfig.categories[0].title}
                   </h2>
-                  <h3 className="text-orange-500 dark:text-orange-300 font-semibold">
+                  <h3 className="text-orange-500 font-semibold">
                   {userConfig.categories[0].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
@@ -71,7 +71,7 @@ const CategoryList = () => {
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
                     {userConfig.categories[1].title}
                   </h2>
-                  <h3 className="text-orange-500 dark:text-orange-300 font-semibold">
+                  <h3 className="text-orange-500 font-semibold">
                   {userConfig.categories[1].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
@@ -108,7 +108,7 @@ const CategoryList = () => {
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
                     {userConfig.categories[2].title}
                   </h2>
-                  <h3 className="text-orange-500 dark:text-orange-300 font-semibold">
+                  <h3 className="text-orange-500 font-semibold">
                   {userConfig.categories[2].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">

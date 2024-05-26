@@ -3,15 +3,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Ptasie radio`,
-    titleTemplate: "%s · Starter bolg",
-    description: `Gatsby and Tailwindcss starter`,
-    keywords: [`gatsby`, `tailwind`, `react`, `tailwindcss`],
-    author: `@doe`,
+    title: `Pentoda - radiotechnika z dawnych lat`,
+    titleTemplate: "Pentoda - radiotechnika z dawnych lat",
+    description: `Pentoda - radiotechnika z dawnych lat`,
+    keywords: [`radia`, `lampy`, `czasopisma`],
+    author: `w129`,
     siteUrl: "https://www.doe.com", // No trailing slash allowed!
     image: "/images/site-image.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@doe",
-    lang: "en",
+    twitterUsername: "@w129",
+    lang: "pl-PL",
   },
   plugins: [
     "gatsby-plugin-postcss",

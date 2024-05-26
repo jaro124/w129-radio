@@ -46,7 +46,7 @@ const BlogPost = ({ data, children }) => {
           <h1 className="text-2xl font-semibold text-gray-800 lg:text-3xl dark:text-white mb-4">
             {data.mdx.frontmatter.title}
           </h1>
-          <h2 className="font-medium text-sm text-orange-400 mb-6 uppercase tracking-wide">
+          <h2 className="font-medium text-sm text-orange-500 mb-6 uppercase tracking-wide">
             {data.mdx.frontmatter.subtitle}
           </h2>
           <GatsbyImage

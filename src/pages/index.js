@@ -20,7 +20,7 @@ const IndexPage = () => {
           <h1 className="text-2xl text-black dark:text-gray-400 font-medium mb-2">
             Radiotechnika z dawnych lat
           </h1>
-          <h2 className="font-medium text-sm text-orange-400 mb-4 uppercase tracking-wide">
+          <h2 className="font-medium text-sm text-orange-500 mb-4 uppercase tracking-wide">
             Pentoda
           </h2>
           <p className="text-primary">
