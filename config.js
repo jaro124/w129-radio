@@ -16,7 +16,7 @@ const categories = [
         subTitle: "Eksponaty lampowe",
         description: "Lampy elektronowe to serce radioodbiorników, a także fundament rozwoju elektroniki XX wieku. W naszej kolekcji znajdują się różnorodne typy lamp, od klasycznych triod po złożone heptody. Każda lampa to nie tylko element techniczny, ale również świadectwo epoki, w której powstała.",
         pageTemplate: "./src/templates/radia-template.js",
-        listTemplate: "./src/templates/radia-list-template.js",
+        listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-lampy.jpg",
     },
     {
@@ -43,7 +43,7 @@ const categories = [
         subTitle: "Wtyczki do urządzeń radiowych",
         description: "W naszej kolekcji znajdują się różnorodne wtyczki i złącza od urządzeń radiowych, które odzwierciedlają rozwój standardów na przestrzeni lat oraz kraju ich powstania. Od klasycznych wtyczek zasilających i głośnikowych po specjalistyczne złącza antenowe – każda wtyczka ma swoją historię i zastosowanie. ",
         pageTemplate: "./src/templates/radia-template.js",
-        listTemplate: "./src/templates/radia-list-template.js",
+        listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-wtyczki.jpg",
     },
     { 
@@ -52,7 +52,7 @@ const categories = [
         subTitle: "Gałki do urządzeń radiowych",
         description: "Gałki i pokrętła to nieodzowny element każdego radioodbiornika, pełniące zarówno funkcje praktyczne, jak i estetyczne. W naszej kolekcji znajdziesz klasyczne bakelitowe pokrętła oraz eleganckie chromowane gałki. Każda gałka i pokrętło to małe dzieło sztuki, które dodaje charakteru i unikalności każdemu odbiornikowi.",
         pageTemplate: "./src/templates/radia-template.js",
-        listTemplate: "./src/templates/radia-list-template.js",
+        listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-galki.jpg",
     },
     { 
@@ -61,7 +61,7 @@ const categories = [
         subTitle: "Skale do radioodbiorników",
         description: "Skale radiowe to nieodzowny element każdego radioodbiornika, który nie tylko umożliwia precyzyjne strojenie, ale również nadaje urządzeniom wyjątkowego charakteru. Każda skala radiowa to małe dzieło sztuki, które odzwierciedla estetykę i technologię swojej epoki. Zapraszamy do zapoznania się z naszą bogatą kolekcją skal radiowych, które są świadectwem historii i rozwoju radiotechniki.",
         pageTemplate: "./src/templates/radia-template.js",
-        listTemplate: "./src/templates/radia-list-template.js",
+        listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-skale.jpg",
     },
     { 
@@ -70,7 +70,7 @@ const categories = [
         subTitle: "Eksponaty dodatkowe",
         description: "Radio i jego historia uwiecznione zostały na znaczkach i kartkach pocztowych. Z okazji rocznic i wystaw pojawiały się wydania specjalne opatrzone często datownikiem okolicznościowym. Znaczki stosowane były również do noszenia opłat abonamentowych. Te wszystkie walory znajdują się w naszej kolekcji.",
         pageTemplate: "./src/templates/radia-template.js",
-        listTemplate: "./src/templates/radia-list-template.js",
+        listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-filatelistyka.jpg",
     },
     { 
@@ -79,7 +79,7 @@ const categories = [
         subTitle: "Eksponaty dodatkowe",
         description: "Radioodbiorniki pojawiły się także na pudełkach z zapałkami. Dziś już mało popularne zapałki odegrały swoją rolę w propagowaniu techniki radiowej. W naszej kolekcji można znaleźć etykiety zapałczane z różnych zakładów produkcyjnych.",
         pageTemplate: "./src/templates/radia-template.js",
-        listTemplate: "./src/templates/radia-list-template.js",
+        listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-filumenistyka.jpg",
     },
     { 
@@ -88,7 +88,7 @@ const categories = [
         subTitle: "Eksponaty dodatkowe",
         description: "Producenci sprzętu radiowego jak i stacje radiowe często reklamują się za pomocą znaczków (przypinek). Z okazji rocznic i ważnych wydarzeń emitowane są medale. W naszej kolekcji znajdują się eksponaty zarówno polskie jak i zagraniczne. Niektóre z nich przyjmują kształt lamp elektronowych, odbiorników radiowych czy fal radiowych.",
         pageTemplate: "./src/templates/radia-template.js",
-        listTemplate: "./src/templates/radia-list-template.js",
+        listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-medale.jpg",
     },
     { 
@@ -97,7 +97,7 @@ const categories = [
         subTitle: "Eksponaty dodatkowe",
         description: "Emblematy na radioodbiornikach to nie tylko znaki rozpoznawcze producentów, ale również elementy, które dodają charakteru każdemu urządzeniu. W naszej kolekcji znajdziesz różnorodne emblematy, które odzwierciedlają ducha swoich czasów. Każdy emblemat opowiada historię marki i jej wkładu w rozwój technologii radiowej.",
         pageTemplate: "./src/templates/radia-template.js",
-        listTemplate: "./src/templates/radia-list-template.js",
+        listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-emblematy.jpg",
     },
     { 
@@ -106,7 +106,7 @@ const categories = [
         subTitle: "Eksponaty dodatkowe",
         description: "W naszych zbiorach znajdują się też eksponaty takie ja: rachunki, pokwitowania czy opakowania po lampach elektronowych i odbiornikach. Są tylko luźno związane z techniką radiofonią ale wnoszą wiele wiedzy do udokumentowania rozwoju radiotechniki.",
         pageTemplate: "./src/templates/radia-template.js",
-        listTemplate: "./src/templates/radia-list-template.js",
+        listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-varia.jpg",
     },
     { 
