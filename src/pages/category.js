@@ -10,10 +10,12 @@ const CategoryList = () => {
   const radiaImage = "../images/category-radia.jpg"
   const lampyImage = "../images/category-lampy.jpg"
   const odbiornikiImage = "../images/category-odbiorniki.jpg"
+  const radiostacjeImage = "../images/category-radiostacje.jpg"
   const czasopismaImage = "../images/category-czasopisma.jpg"
   const wtyczkiImage = "../images/category-wtyczki.jpg"
   const galkiImage = "../images/category-galki.jpg"
   const skaleImage = "../images/category-skale.jpg"
+  const sciankiImage = "../images/category-scianki.jpg"
   const filatelistykaImage = "../images/category-filatelistyka.jpg"
   const filumenistykaImage = "../images/category-filumenistyka.jpg"
   const medaleImage = "../images/category-medale.jpg"
@@ -150,7 +152,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[3].subTitle}
-                    src={czasopismaImage}
+                    src={radiostacjeImage}
                   />
                 </div>
                 <div className="p-4">
@@ -187,7 +189,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[4].subTitle}
-                    src={wtyczkiImage}
+                    src={czasopismaImage}
                   />
                 </div>
                 <div className="p-4">
@@ -224,7 +226,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[5].subTitle}
-                    src={galkiImage}
+                    src={wtyczkiImage}
                   />
                 </div>
                 <div className="p-4">
@@ -261,7 +263,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[6].subTitle}
-                    src={skaleImage}
+                    src={galkiImage}
                   />
                 </div>
                 <div className="p-4">
@@ -298,7 +300,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[7].subTitle}
-                    src={filatelistykaImage}
+                    src={skaleImage}
                   />
                 </div>
                 <div className="p-4">
@@ -335,7 +337,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[8].subTitle}
-                    src={filumenistykaImage}
+                    src={sciankiImage}
                   />
                 </div>
                 <div className="p-4">
@@ -372,7 +374,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[9].subTitle}
-                    src={medaleImage}
+                    src={filatelistykaImage}
                   />
                 </div>
                 <div className="p-4">
@@ -409,7 +411,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[10].subTitle}
-                    src={emblematyImage}
+                    src={filumenistykaImage}
                   />
                 </div>
                 <div className="p-4">
@@ -446,7 +448,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[11].subTitle}
-                    src={variaImage}
+                    src={medaleImage}
                   />
                 </div>
                 <div className="p-4">
@@ -483,7 +485,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[12].subTitle}
-                    src={konstrukcjeImage}
+                    src={emblematyImage}
                   />
                 </div>
                 <div className="p-4">
@@ -520,7 +522,7 @@ const CategoryList = () => {
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
                     alt={userConfig.categories[13].subTitle}
-                    src={miernikiImage}
+                    src={variaImage}
                   />
                 </div>
                 <div className="p-4">
@@ -548,7 +550,81 @@ const CategoryList = () => {
                 </div>
               </div>
             </div>
-          </Link>                                                      
+          </Link>   
+
+          <Link to={"/" + userConfig.categories[0].name}>
+            <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
+              <div className="md:flex">
+                <div className="md:shrink-0">
+                  <StaticImage
+                    className="h-48 w-full object-cover md:h-full md:w-48"
+                    alt={userConfig.categories[0].subTitle}
+                    src={konstrukcjeImage}
+                  />
+                </div>
+                <div className="p-4">
+                  <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
+                    {userConfig.categories[14].title}
+                  </h2>
+                  <h3 className="text-orange-500 font-semibold">
+                  {userConfig.categories[14].subTitle}
+                  </h3>
+                  <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
+                  {userConfig.categories[14].description}
+                  </p>
+                  <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
+                    <div className="ml-2">
+                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
+                        66
+                      </span>
+                    </div>
+                    <div className="ml-2">
+                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
+                        Polska
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          <Link to={"/" + userConfig.categories[0].name}>
+            <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
+              <div className="md:flex">
+                <div className="md:shrink-0">
+                  <StaticImage
+                    className="h-48 w-full object-cover md:h-full md:w-48"
+                    alt={userConfig.categories[0].subTitle}
+                    src={miernikiImage}
+                  />
+                </div>
+                <div className="p-4">
+                  <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
+                    {userConfig.categories[15].title}
+                  </h2>
+                  <h3 className="text-orange-500 font-semibold">
+                  {userConfig.categories[15].subTitle}
+                  </h3>
+                  <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
+                  {userConfig.categories[15].description}
+                  </p>
+                  <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
+                    <div className="ml-2">
+                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
+                        66
+                      </span>
+                    </div>
+                    <div className="ml-2">
+                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
+                        Polska
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>                                                                       
 
         </div>
       </div>

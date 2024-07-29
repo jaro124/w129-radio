@@ -28,6 +28,15 @@ const categories = [
         listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-odbiorniki.jpg",
     },
+    {
+        name: "radiostacje",
+        title: "Radiostacje",
+        subTitle: "Eksponaty radiowe",
+        description: "Radiotechnika znalazła także zastosowanie w wojsku. To już nie eleganckie odbiorniki radiowe a sprzęt nadawczo odbiorczy umożliwiający zapewnienie dwukierunkowej łączności w każdych warunkach także na polu walki. Oczywiście istnieją też cywilne radiostacje eksploatowane np. przez radioamatorów. W naszej kolekcji znajdują się między innymi radiostacje, które były na wyposażeniu Wojska Polskiego.",
+        pageTemplate: "./src/templates/radia-template.js",
+        listTemplate: "./src/templates/radia-list-template.js",
+        image: "../images/category-radiostacje.jpg",
+    },
     { 
         name: "czasopisma",
         title: "Literatura",
@@ -63,6 +72,15 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-skale.jpg",
+    },
+    { 
+        name: "scianki",
+        title: "Tylne ścianki",
+        subTitle: "Tylne ścianki do radioodbiorników",
+        description: "Tylne ścianki od radioodbiorników to często niedoceniane, ale istotne elementy konstrukcji urządzeń. Chronią one wewnętrzne komponenty, a także pełnią funkcję informacyjną, zawierając dane techniczne, schematy oraz instrukcje.",
+        pageTemplate: "./src/templates/radia-template.js",
+        listTemplate: "./src/templates/lampy-list-template.js",
+        image: "../images/category-scianki.jpg",
     },
     { 
         name: "filatelistyka",
