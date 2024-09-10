@@ -26,7 +26,6 @@ export const query = graphql`
         title
         subtitle
         hero_image_alt
-        hero_image_author
         hero_image {
           childImageSharp {
             gatsbyImageData
@@ -53,7 +52,7 @@ const BlogPost = ({ data, children }) => {
             image={image}
             alt={data.mdx.frontmatter.hero_image_alt}
           />
-          <p className="text-sm mb-4">Autor: {data.mdx.frontmatter.hero_image_author}</p>
+          
           <MDXProvider
             components={{
               p: Paragraf,

@@ -1,16 +1,13 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/core/layout"
-import HeroHome from "../components/hero-home"
-import Actions from "../components/actions"
+import Hero from "../components/hero"
 import Seo  from "../components/core/seo"
 
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <div className="p-4">
-        <HeroHome />
-        <Actions />
+        <Hero />
       </div>
     </Layout>
   );

@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from "react"
 
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -34,11 +33,7 @@ const HeroHome = () => {
               technologii radiowej z ubiegłych dekad.
             </p>
 
-            <div className="mt-8">
-            <button className="bg-orange-400 hover:bg-orange-500 text-black font-semibold py-2 px-4 border border-orange-500 hover:border-transparent rounded">
-              <Link to="/about">Więcej o nas</Link>
-            </button>
-          </div>
+
           </div>
         </div>
       </div>
