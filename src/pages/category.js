@@ -552,13 +552,13 @@ const CategoryList = () => {
             </div>
           </Link>   
 
-          <Link to={"/" + userConfig.categories[0].name}>
+          <Link to={"/" + userConfig.categories[14].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[0].subTitle}
+                    alt={userConfig.categories[14].subTitle}
                     src={konstrukcjeImage}
                   />
                 </div>
@@ -589,13 +589,13 @@ const CategoryList = () => {
             </div>
           </Link>
 
-          <Link to={"/" + userConfig.categories[0].name}>
+          <Link to={"/" + userConfig.categories[15].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[0].subTitle}
+                    alt={userConfig.categories[15].subTitle}
                     src={miernikiImage}
                   />
                 </div>

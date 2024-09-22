@@ -1,5 +1,5 @@
 // user page config
-const ITEMS_PER_PAGE = 3
+const ITEMS_PER_PAGE = 9
 const categories = [
     {
         name: "radia",
@@ -138,9 +138,9 @@ const categories = [
     },
     { 
         name: "mierniki",
-        title: "Mierniki lamp",
+        title: "Sprzęt radiotechniczny",
         subTitle: "Eksponaty dodatkowe",
-        description: "W lampowej technice radiowej podstawą są lampy elektronowe. Niestety z czasem elementy te tracą swoje parametry – zmniejsza się emisja, zmienia charakterystyka, tracona jest próżnia. Aby wiedzieć w jakim stanie jest lampa trzeba poddać ją badaniu. Do tego służą mierniki lamp elektronowych. W naszej kolekcji znajduje się kilka egzemplarzy.",
+        description: "Technika radiowa to także szereg sprzętu pomocniczego: pomiarowego, diagnostycznego, serwisowego itp. W naszejkolekcji znajdują się: mierniki lamp elektronowych, amperomierze, woltomierze, mierniki uniwersalne, generatory, oscyloskopy.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-mierniki.jpg",
