@@ -1,9 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/core/layout"
+import { Link } from "gatsby"
 import Seo from "../components/core/seo"
 import PostListNavigation from "../components/post-list-navigation"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { HomeIcon } from "@heroicons/react/16/solid"
 
 export const query = graphql`
   query blogListQuery($skip: Int!, $limit: Int!, $category: String!) {
@@ -40,7 +42,24 @@ const LampyListTemplate = ({
     <Layout>
       <div className="px-4">
         <div className="max-w-4xl bg-white dark:bg-black rounded-lg mx-auto my-8 p-8">
-          <div className="text-center">
+
+        <nav className="text-sm sm:text-base bg-white dark:bg-black p-2 rounded-md shadow-lg">
+    <ol className="list-none p-0 inline-flex space-x-2">
+      <li className="flex items-center">
+        <Link to="/" className="text-gray-500 hover:text-orange-400"><HomeIcon className="size-5" /> </Link>
+             <span className="mx-2">/</span>
+      </li>
+      <li className="flex items-center">
+        <Link to="/category" className="text-gray-500 hover:text-orange-400">Eksponaty</Link>
+        <span className="mx-2">/</span>
+      </li>
+      <li className="flex items-center">
+        <span className="text-gray-500">{title}</span>
+      </li>
+    </ol>
+  </nav>
+
+          <div className="text-center mt-8">
             <h1 className="text-2xl font-semibold text-gray-800 uppercase underline decoration-orange-400 lg:text-3xl dark:text-white">
               {title}
             </h1>

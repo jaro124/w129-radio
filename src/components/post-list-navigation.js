@@ -1,5 +1,7 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from "react"
+import { Link } from "gatsby"
+import { ArrowRightIcon } from "@heroicons/react/16/solid"
+import { ArrowLeftIcon } from "@heroicons/react/16/solid"
 
 const PostListNavigation = ({ numPages, currentPage, category }) => {
   const preLink = "/" + category + "/"
@@ -12,27 +14,24 @@ const PostListNavigation = ({ numPages, currentPage, category }) => {
   return (
     <div>
       <div>
-        <hr className="mt-8" />
-        <div className="flex flex-wrap justify-between w-full">
+        <div className="flex flex-wrap justify-between w-full mt-8 rounded-md shadow-lg text-sm sm:text-base bg-white dark:bg-black p-2">
           <div className="w-full md:w-1/3 text-center md:text-left">
-            <p className="text-xs text-gray-500">Previous page</p>
             {!isFirst && (
               <Link to={prevPageLink}>
-                <p className="block md:inline-block mt-4 md:mt-0 no-underline font-medium text-primary border-b-2 border-transparent hover:border-orange-400">
-                  ← Page {currentPage - 1}
+                <p className="block md:inline-block text-sm mt-4 md:mt-0 text-gray-500 hover:text-orange-400">
+                <ArrowLeftIcon className="size-5" />
                 </p>
               </Link>
             )}
           </div>
-          <div className="w-full md:w-1/3 text-xs text-gray-500 text-center">
-            Page {currentPage} of {numPages}
+          <div className="w-full md:w-1/3 text-sm text-gray-500 text-center">
+            Strona {currentPage} z {numPages}
           </div>
           <div className="w-full md:w-1/3 pt-2 md:pt-0 text-center md:text-right">
-            <p className="text-xs text-gray-500">Next page</p>
             {!isLast && (
               <Link to={nextPageLink}>
-                <p className="block md:inline-block mt-4 md:mt-0 no-underline font-medium text-primary border-b-2 border-transparent hover:border-orange-400">
-                  Page {nextPage} →
+                <p className="block md:inline-block mt-4 md:mt-0 text-gray-500 hover:text-orange-400">
+                  <ArrowRightIcon className="size-5" />
                 </p>
               </Link>
             )}

@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import Layout from "../components/core/layout.js";
 import Seo from "../components/core/seo.js";
+import PostNavigation from "../components/post-item-navigation"
 import {
   Paragraf,
   MyLink,
@@ -37,6 +38,7 @@ export const query = graphql`
           }
         }
       }
+      id
     }
   }
 `;
@@ -106,6 +108,9 @@ const BlogPost = ({ data, children }) => {
           >
             {children}
           </MDXProvider>
+
+          <PostNavigation category={categoryLink} />
+
         </div>
       </div>
     </Layout>
