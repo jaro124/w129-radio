@@ -4,12 +4,14 @@ import Seo from "../components/core/seo"
 import HeroHome from "../components/hero-home"
 import Actions from "../components/actions"
 import History from "../components/history"
+import StatuteAbout from "../components/statute"
 
 const AboutPage = () => {
   return (
     <Layout pageTitle="About Page">
       <div className="p-4">
         <HeroHome />
+        <StatuteAbout />
         <Actions />
         <div className="flex justify-center my-6">
         <div>
