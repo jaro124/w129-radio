@@ -6,12 +6,14 @@ import { StaticImage } from "gatsby-plugin-image";
 const SectionHero = () => {
   return (
     <div className="relative w-full h-screen">
+      <div className="absolute inset-0 w-full h-full object-cover">
       <StaticImage
         src="../images/site-image.jpg"
         alt="Background"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: "brightness(0.5)" }}
       />
+      </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
         <h1 className="text-5xl font-bold text-white mb-8">
           Pentoda - radiotechnika z dawnych lat
