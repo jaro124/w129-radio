@@ -34,7 +34,7 @@ const SectionAbout = () => {
           <div className="rounded-lg bg-white text-black w-full">
             <StaticImage
               src="../images/logo.jpg"
-              alt="Background"
+              alt="Logo"
               className="w-96 h-96 object-cover"
             />
           </div>

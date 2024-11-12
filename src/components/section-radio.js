@@ -9,7 +9,7 @@ const SectionRadio = () => {
       <div className="w-full h-auto lg:w-1/2 lg:h-auto">
         <div className="relative w-full h-full">
           <StaticImage
-            src="../images/site-image.jpg"
+            src="../images/site-image-2.jpg"
             alt="Background"
             className="w-full h-full object-cover"
             style={{ filter: "brightness(0.5)" }}
@@ -22,7 +22,7 @@ const SectionRadio = () => {
               eksponaty radiowe
             </h3>
             <p className="mt-4">
-              Radioodbiorniki lampowe to nasza największa pasja. W swojej kolekcji posiadamy ponad 100 eksponatów. Najstarszy pochodzi z 1900 roku.
+              Radioodbiorniki lampowe to nasza największa pasja. W swojej kolekcji posiadamy ponad 100 eksponatów. Najstarszy pochodzi z 1925 roku.
             </p>
             <div className="mt-8">
               <button className="bg-orange-400 hover:bg-orange-500 text-black font-semibold py-2 px-4 border border-orange-500 hover:border-transparent rounded">

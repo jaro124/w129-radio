@@ -16,7 +16,7 @@ const Footer = ({ siteTitle }) => (
       <div className="w-full md:w-1/3 bg-white dark:bg-black text-black dark:text-gray-400 p-4">
         <p className="text-xs pb-4">Social:</p>
         <div className="flex flex-wrap">
-          <a href="https://www.facebook.com">
+          <a href="https://www.facebook.com/pentoda.radio">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -35,7 +35,7 @@ const Footer = ({ siteTitle }) => (
               ></path>
             </svg>
           </a>
-          <a href="https://www.instagram.com">
+          <a href="https://www.instagram.com/pentoda.radio">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -135,7 +135,7 @@ const Footer = ({ siteTitle }) => (
               </g>
             </svg>
           </a>
-          <a href="https://www.youtube.com">
+          <a href="https://www.youtube.com/@Pentoda">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -151,7 +151,7 @@ const Footer = ({ siteTitle }) => (
               <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
             </svg>
           </a>
-          <a href="https://pl.linkedin.com">
+          <a href="https://www.linkedin.com/company/pentoda">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
