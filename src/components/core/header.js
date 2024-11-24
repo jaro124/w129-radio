@@ -15,29 +15,33 @@ function Header() {
           <svg
             width="36"
             height="36"
-            className="fill-current text-black dark:text-gray-400"
+            className="fill-white stroke-black dark:fill-black dark:stroke-gray-400"
             viewBox="0 0 36 36"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle fill="#ffffff" r="16" cx="18" cy="18" stroke="#000000" stroke-width="1"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="20" x="8" y="10"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="20" x="8" y="22"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="8" y="24"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="27" y="24"/>
+            <circle r="16" cx="18" cy="18" stroke-width="1"/>
+            <rect height="1" width="20" x="8" y="10"/>
+            <rect height="1" width="20" x="8" y="22"/>
+            <rect height="1" width="1" x="8" y="24"/>
+            <rect height="1" width="1" x="27" y="24"/>
 
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="9" y="14"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="9" y="18"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="13" y="14"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="13" y="18"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="17" y="14"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="17" y="18"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="21" y="14"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="21" y="18"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="25" y="14"/>
-            <rect fill="#000000" height="1" stroke="#000000" width="1" x="25" y="18"/>
+            <rect height="1" width="1" x="9" y="14"/>
+            <rect height="1" width="1" x="9" y="18"/>
+            
+            <rect height="1" width="1" x="13" y="14"/>
+            <rect height="1" width="1" x="13" y="18"/>
+            
+            <rect height="1" width="1" x="17" y="14"/>
+            <rect height="1" width="1" x="17" y="18"/>
+            
+            <rect height="1" width="1" x="21" y="14"/>
+            <rect height="1" width="1" x="21" y="18"/>
+            
+            <rect height="1" width="1" x="25" y="14"/>
+            <rect height="1" width="1" x="25" y="18"/>
 
-            <rect fill="#000000" height="8" stroke="#000000" transform="matrix(0.7071, -0.7071, 0.7071, 0.7071, 18, 27)" width="1"/>
-            <rect fill="#000000" height="8" stroke="#000000" transform="matrix(-0.7071, -0.7071, -0.7071, 0.7071, 18, 27)" width="1"/>
+            <rect height="8" transform="matrix(0.7071, -0.7071, 0.7071, 0.7071, 18, 27)" width="1"/>
+            <rect height="8" transform="matrix(-0.7071, -0.7071, -0.7071, 0.7071, 18, 27)" width="1"/>
           </svg>
           <span className="font-bold text-xl tracking-tight pl-3">
             Pentoda
