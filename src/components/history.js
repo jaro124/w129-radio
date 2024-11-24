@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const History = () => {
   return (
     <div>
-        <div className="max-w-4xl bg-white dark:bg-black rounded-lg mx-auto my-8 p-16">
+        <div className="max-w-4xl bg-white dark:bg-slate-800 rounded-lg mx-auto my-8 p-16">
           
         <div class="flex flex-col items-center justify-center md:items-start md:flex-row">
           <div class="relative block w-full md:w-1/3">

@@ -6,12 +6,12 @@ const HeroHome = () => {
   return (
     <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
-        <div className="relative z-10 lg:py-16">
-          <div className="relative h-64 sm:h-80 lg:h-full">
+        <div className="relative z-10 lg:py-48 2xl:py-80">
+          <div className="relative h-64 sm:h-96 bg-red-400">
             <StaticImage
               alt="Pentoda - radiotechnika z dawnych lat"
               src="../images/pentoda-home.jpg"
-              className="absolute inset-0 h-full w-full object-cover object-top"
+              className="absolute inset-0 h-full w-full object-fill object-top"
             />
           </div>
         </div>
