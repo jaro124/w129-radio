@@ -1,6 +1,6 @@
 import React from "react";
 
-const StatuteAbout = () => {
+const SectionStatute = () => {
   return (
     <div>
       <div className="flex justify-center my-6">
@@ -37,4 +37,4 @@ const StatuteAbout = () => {
   );
 };
 
-export default StatuteAbout;
+export default SectionStatute;

@@ -2,7 +2,7 @@ import React from "react"
 
 import { StaticImage } from "gatsby-plugin-image";
 
-const HeroHome = () => {
+const SectionOwners = () => {
   return (
     <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
@@ -16,8 +16,8 @@ const HeroHome = () => {
           </div>
         </div>
 
-        <div className="relative flex items-center bg-gray-100 dark:bg-slate-800">
-          <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100 dark:bg-slate-800"></span>
+        <div className="relative flex items-center bg-gray-100 dark:bg-black">
+          <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100 dark:bg-black"></span>
 
           <div className="p-8 sm:p-16 lg:p-24">
             <h1 className="text-6xl text-gray-700 dark:text-gray-400 font-bold">Pentoda</h1>
@@ -41,4 +41,4 @@ const HeroHome = () => {
   );
 };
 
-export default HeroHome;
+export default SectionOwners;

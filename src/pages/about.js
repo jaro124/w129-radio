@@ -1,18 +1,18 @@
 import * as React from "react"
 import Layout from "../components/core/layout"
 import Seo from "../components/core/seo"
-import HeroHome from "../components/hero-home"
-import Actions from "../components/actions"
-import History from "../components/history"
-import StatuteAbout from "../components/statute"
+import SectionOwners from "../components/section-owners"
+import SectionActions from "../components/section-actions"
+import SectionHistory from "../components/section-history"
+import SectionStatute from "../components/section-statute"
 
 const AboutPage = () => {
   return (
     <Layout pageTitle="About Page">
       <div className="p-4">
-        <HeroHome />
-        <StatuteAbout />
-        <Actions />
+        <SectionOwners />
+        <SectionStatute />
+        <SectionActions />
         <div className="flex justify-center my-6">
         <div>
           <h1 className="text-3xl font-semibold text-gray-800 uppercase underline decoration-orange-400 lg:text-3xl dark:text-white">
@@ -20,7 +20,7 @@ const AboutPage = () => {
           </h1>
         </div>
         </div>
-        <History />
+        <SectionHistory />
 
       </div>
     </Layout>

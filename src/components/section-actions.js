@@ -6,7 +6,7 @@ import { BellIcon } from "@heroicons/react/24/solid";
 import { LightBulbIcon } from "@heroicons/react/24/solid";
 import { UsersIcon } from "@heroicons/react/24/solid";
 
-const Actions = () => {
+const SectionActions = () => {
   return (
     <div>
       <div className="flex justify-center my-6">
@@ -103,4 +103,4 @@ const Actions = () => {
   );
 };
 
-export default Actions;
+export default SectionActions;

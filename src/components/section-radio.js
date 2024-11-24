@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const SectionRadio = () => {
   return (
-    <div className="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl mb-8">
+    <div className="relative flex flex-col items-center mx-auto p-4 lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl mb-8">
       <div className="w-full h-auto lg:w-1/2 lg:h-auto">
         <div className="relative w-full h-full">
           <StaticImage

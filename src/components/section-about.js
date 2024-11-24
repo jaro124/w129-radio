@@ -31,7 +31,7 @@ const SectionAbout = () => {
       </div>
       <div className="flex items-center py-5 md:w-1/2 md:pb-10 md:pt-4 md:pl-4">
         <div className="relative w-full p-3 rounded  md:p-8">
-          <div className="rounded-lg bg-white text-black w-full">
+          <div className="rounded-lg bg-white dark:bg-black text-black w-full">
             <StaticImage
               src="../images/logo.jpg"
               alt="Logo"
