@@ -25,7 +25,7 @@ import { HomeIcon } from "@heroicons/react/16/solid";
 const userConfig = require("/config.js");
 
 export const query = graphql`
-  query ($id: String!, $category: String!) {
+  query ($id: String!, $category: String!, $gallery: String!) {
     mdx(id: { eq: $id }, frontmatter: { category: { eq: $category } }) {
       frontmatter {
         title
@@ -40,6 +40,27 @@ export const query = graphql`
       }
       id
     }
+    allFile(
+        filter: {
+          relativeDirectory: { eq: $gallery }
+          extension: { eq: "jpg" }
+        }
+      ) {
+        edges {
+          node {
+            childImageSharp {
+              gatsbyImageData(
+                width: 400
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+            name
+            id
+          }
+        }
+        totalCount
+      }  
   }
 `;
 
@@ -49,6 +70,9 @@ const BlogPost = ({ data, children }) => {
   const categoryItem = userConfig.categories.find(category => category.name === data.mdx.frontmatter.category);
   const categoryLink = "/" + data.mdx.frontmatter.category
   const categoryName = categoryItem.title
+
+  const images = data.allFile.edges.map((edge) =>
+    getImage(edge.node.childImageSharp))
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
@@ -108,6 +132,21 @@ const BlogPost = ({ data, children }) => {
           >
             {children}
           </MDXProvider>
+
+          <div className="flex justify-center my-6">
+            <div>
+              <h1 className="text-3xl font-semibold text-gray-800 uppercase underline decoration-orange-400 lg:text-3xl dark:text-white">
+                Galeria
+              </h1>
+            </div>
+          </div>
+          <div className="flex flex-col justify-center content-center">
+            {images.map((image, index) => (
+              <div key={index} className="flex justify-center mt-2">
+                <GatsbyImage image={image} alt={`Image ${index + 1}`} />
+              </div>
+            ))}
+          </div>
 
           <PostNavigation category={categoryLink} />
 

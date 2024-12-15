@@ -68,9 +68,9 @@ const LampyListTemplate = ({
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            {edges.map((edge) => (
+            {edges.map((edge, index) => (
               
-                <div className="w-full max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl border dark:border-gray-800 hover:border-gray-200 dark:hover:border-gray-500">
+                <div key={index} className="w-full max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl border dark:border-gray-800 hover:border-gray-200 dark:hover:border-gray-500">
                   <GatsbyImage
                     image={getImage(edge.node.frontmatter.hero_image)}
                     alt={edge.node.frontmatter.hero_image_alt}
