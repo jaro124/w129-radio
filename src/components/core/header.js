@@ -19,7 +19,7 @@ function Header() {
             viewBox="0 0 36 36"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle r="16" cx="18" cy="18" stroke-width="1"/>
+            <circle r="16" cx="18" cy="18" />
             <rect height="1" width="20" x="8" y="10"/>
             <rect height="1" width="20" x="8" y="22"/>
             <rect height="1" width="1" x="8" y="24"/>
