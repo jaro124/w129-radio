@@ -57,15 +57,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        47
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -94,14 +89,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        100
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -131,14 +122,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        1
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -168,14 +155,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        3
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -205,14 +188,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        53
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -242,14 +221,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        9
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -279,14 +254,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        7
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -316,14 +287,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        2
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -353,14 +320,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        1
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -390,14 +353,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        7
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -427,14 +386,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        12
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -464,14 +419,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        13
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -501,14 +452,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        16
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -538,14 +485,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        3
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -575,14 +518,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        2
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -612,14 +551,10 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        66
+                        4
                       </span>
                     </div>
-                    <div className="ml-2">
-                      <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        Polska
-                      </span>
-                    </div>
+                    
                   </div>
                 </div>
               </div>

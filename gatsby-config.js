@@ -8,7 +8,7 @@ module.exports = {
     description: `Pentoda - radiotechnika z dawnych lat`,
     keywords: [`radia`, `lampy`, `czasopisma`],
     author: `w129`,
-    siteUrl: "https://www.doe.com", // No trailing slash allowed!
+    siteUrl: "https://www.pentoda.pl", // No trailing slash allowed!
     image: "/images/site-image.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@w129",
     lang: "pl-PL",
@@ -35,13 +35,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Pentoda`,
+        short_name: `Pentoda`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `src/images/w129-icon.png`,
+        icon: `src/images/pentoda-icon.png`,
       },
     },
     {
