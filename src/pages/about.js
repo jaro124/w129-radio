@@ -29,4 +29,11 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-export const Head = () => <Seo title="About page" />;
+export const Head = () => (
+  <Seo
+    title="Pentoda - radiotechnika z dawnych lat"
+    description="Zapraszamy do zapoznania się z działalnością stowarzyszenia Pentoda, organizacji skupiającej pasjonatów radiofonii i historii techniki. Dowiedz się więcej o członkach stowarzyszenia, ich pasji i doświadczeniu. Poznaj historię organizacji i jej działalność na przestrzeni lat."
+    keywords={["Pentoda", "Stowarzyszenie", "Eksponaty", "Odbiorniki radiowe", "Lampy"]}
+    pathname="/about"
+  />
+);

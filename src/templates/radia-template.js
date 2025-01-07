@@ -29,6 +29,7 @@ export const query = graphql`
     mdx(id: { eq: $id }, frontmatter: { category: { eq: $category } }) {
       frontmatter {
         title
+        slug
         subtitle
         category
         hero_image_alt
@@ -156,6 +157,13 @@ const BlogPost = ({ data, children }) => {
   );
 };
 
-export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />;
-
 export default BlogPost;
+
+export const Head = ({ data }) => (
+  <Seo
+    title={data.mdx.frontmatter.title + " - Pentoda - radiotechnika z dawnych lat"}
+    description="Zapraszamy na niezwykłą podróż w przeszłość do świata starych radioodbiorników. Zobacz, jak ewoluowała technika i design przez dekady."
+    keywords={["Pentoda", "Stowarzyszenie", "Eksponaty", "Odbiorniki radiowe", "Lampy", data.mdx.frontmatter.title]}
+    pathname={"/"+data.mdx.frontmatter.category+"/"+data.mdx.frontmatter.slug}
+  />
+);

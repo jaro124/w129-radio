@@ -110,10 +110,10 @@ const LampyListTemplate = ({
 
 export default LampyListTemplate;
 
-export const Head = () => (
+export const Head = ({data}) => (
   <Seo
-    title="List posts page"
-    description="List posts page"
-    keywords={["Blog", "Post"]}
+    title="Pentoda - radiotechnika z dawnych lat"
+    description="Zapraszamy na niezwykłą podróż w przeszłość do świata starych radioodbiorników. Zobacz, jak ewoluowała technika i design przez dekady."
+    keywords={["Pentoda", "Stowarzyszenie", "Eksponaty", "Odbiorniki radiowe", "Lampy"]}
   />
 );

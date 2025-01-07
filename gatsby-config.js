@@ -9,7 +9,7 @@ module.exports = {
     keywords: [`radia`, `lampy`, `czasopisma`],
     author: `w129`,
     siteUrl: "https://www.pentoda.pl", // No trailing slash allowed!
-    image: "/images/site-image.jpg", // Path to your image you placed in the 'static' folder
+    image: "/static/site-image.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@w129",
     lang: "pl-PL",
   },
