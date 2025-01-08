@@ -57,7 +57,7 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        47
+                        51
                       </span>
                     </div>
                     </div>
@@ -188,7 +188,7 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        53
+                        56
                       </span>
                     </div>
                     
@@ -485,7 +485,7 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        3
+                        5
                       </span>
                     </div>
                     
