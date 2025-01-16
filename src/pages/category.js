@@ -1,12 +1,25 @@
-import React from "react";
-import { Link } from "gatsby";
-import Layout from "../components/core/layout";
-import Seo from "../components/core/seo";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react"
+import { graphql } from "gatsby"
+import { Link } from "gatsby"
+import Layout from "../components/core/layout"
+import Seo from "../components/core/seo"
+import { StaticImage } from "gatsby-plugin-image"
+import CardCategory from "../components/card-category.js"
 
 const userConfig = require("../../config.js");
 
-const CategoryList = () => {
+export const query = graphql`
+  query {
+    allMdx {
+      group(field: {frontmatter: {category: SELECT}}) {
+        fieldValue
+        totalCount
+    }
+  }
+  }
+`;
+
+const CategoryList = ({data}) => {
   const radiaImage = "../images/category-radia.jpg"
   const lampyImage = "../images/category-lampy.jpg"
   const odbiornikiImage = "../images/category-odbiorniki.jpg"
@@ -24,6 +37,22 @@ const CategoryList = () => {
   const konstrukcjeImage = "../images/category-konstrukcje.jpg"
   const miernikiImage = "../images/category-mierniki.jpg"
   
+  var categories = userConfig.categories
+
+  const categoryCounters = data.allMdx.group
+  
+  categories.forEach(category => {
+      categoryCounters.forEach(categoryCounter => {
+        if(category.name===categoryCounter.fieldValue)
+          category.counter = categoryCounter.totalCount
+      })
+  });
+
+  
+
+  console.log(categories)
+  console.log(categoryCounters)
+  
   return (
     <Layout>
       <div className="px-4">
@@ -34,30 +63,32 @@ const CategoryList = () => {
             </h1>
           </div>
 
-          <Link to={"/" + userConfig.categories[0].name}>
+          <CardCategory category={categories[0]} />
+
+          <Link to={"/" + categories[0].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[0].subTitle}
+                    alt={categories[0].subTitle}
                     src={radiaImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[0].title}
+                    {categories[0].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[0].subTitle}
+                  {categories[0].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[0].description}
+                  {categories[0].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        51
+                      {categories[0].counter}
                       </span>
                     </div>
                     </div>
@@ -66,30 +97,30 @@ const CategoryList = () => {
             </div>
           </Link>
 
-          <Link to={"/" + userConfig.categories[1].name}>
+          <Link to={"/" + categories[1].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[1].subTitle}
+                    alt={categories[1].subTitle}
                     src={lampyImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[1].title}
+                    {categories[1].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[1].subTitle}
+                  {categories[1].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[1].description}
+                  {categories[1].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        100
+                      {categories[1].counter}
                       </span>
                     </div>
                     
@@ -99,30 +130,30 @@ const CategoryList = () => {
             </div>
           </Link>
 
-          <Link to={"/" + userConfig.categories[2].name}>
+          <Link to={"/" + categories[2].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[2].subTitle}
+                    alt={categories[2].subTitle}
                     src={odbiornikiImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[2].title}
+                    {categories[2].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[2].subTitle}
+                  {categories[2].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[2].description}
+                  {categories[2].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        1
+                      {categories[2].counter}
                       </span>
                     </div>
                     
@@ -132,30 +163,30 @@ const CategoryList = () => {
             </div>
           </Link>
 
-          <Link to={"/" + userConfig.categories[3].name}>
+          <Link to={"/" + categories[3].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[3].subTitle}
+                    alt={categories[3].subTitle}
                     src={radiostacjeImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[3].title}
+                    {categories[3].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[3].subTitle}
+                  {categories[3].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[3].description}
+                  {categories[3].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        3
+                      {categories[3].counter}
                       </span>
                     </div>
                     
@@ -165,30 +196,30 @@ const CategoryList = () => {
             </div>
           </Link>
 
-          <Link to={"/" + userConfig.categories[4].name}>
+          <Link to={"/" + categories[4].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[4].subTitle}
+                    alt={categories[4].subTitle}
                     src={czasopismaImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[4].title}
+                    {categories[4].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[4].subTitle}
+                  {categories[4].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[4].description}
+                  {categories[4].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        56
+                      {categories[4].counter}
                       </span>
                     </div>
                     
@@ -198,30 +229,30 @@ const CategoryList = () => {
             </div>
           </Link>    
 
-          <Link to={"/" + userConfig.categories[5].name}>
+          <Link to={"/" + categories[5].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[5].subTitle}
+                    alt={categories[5].subTitle}
                     src={wtyczkiImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[5].title}
+                    {categories[5].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[5].subTitle}
+                  {categories[5].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[5].description}
+                  {categories[5].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        9
+                      {categories[5].counter}
                       </span>
                     </div>
                     
@@ -231,30 +262,30 @@ const CategoryList = () => {
             </div>
           </Link>  
 
-          <Link to={"/" + userConfig.categories[6].name}>
+          <Link to={"/" + categories[6].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[6].subTitle}
+                    alt={categories[6].subTitle}
                     src={galkiImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[6].title}
+                    {categories[6].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[6].subTitle}
+                  {categories[6].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[6].description}
+                  {categories[6].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        7
+                      {categories[6].counter}
                       </span>
                     </div>
                     
@@ -264,30 +295,30 @@ const CategoryList = () => {
             </div>
           </Link>       
 
-          <Link to={"/" + userConfig.categories[7].name}>
+          <Link to={"/" + categories[7].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[7].subTitle}
+                    alt={categories[7].subTitle}
                     src={skaleImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[7].title}
+                    {categories[7].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[7].subTitle}
+                  {categories[7].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[7].description}
+                  {categories[7].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        2
+                      {categories[7].counter}
                       </span>
                     </div>
                     
@@ -297,13 +328,13 @@ const CategoryList = () => {
             </div>
           </Link> 
 
-          <Link to={"/" + userConfig.categories[8].name}>
+          <Link to={"/" + categories[8].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[8].subTitle}
+                    alt={categories[8].subTitle}
                     src={sciankiImage}
                   />
                 </div>
@@ -320,7 +351,7 @@ const CategoryList = () => {
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        1
+                      {categories[8].counter}
                       </span>
                     </div>
                     
@@ -330,30 +361,30 @@ const CategoryList = () => {
             </div>
           </Link>             
 
-          <Link to={"/" + userConfig.categories[9].name}>
+          <Link to={"/" + categories[9].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[9].subTitle}
+                    alt={categories[9].subTitle}
                     src={filatelistykaImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[9].title}
+                    {categories[9].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[9].subTitle}
+                  {categories[9].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[9].description}
+                  {categories[9].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        7
+                      {categories[9].counter}
                       </span>
                     </div>
                     
@@ -363,30 +394,30 @@ const CategoryList = () => {
             </div>
           </Link>    
 
-          <Link to={"/" + userConfig.categories[10].name}>
+          <Link to={"/" + categories[10].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[10].subTitle}
+                    alt={categories[10].subTitle}
                     src={filumenistykaImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[10].title}
+                    {categories[10].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[10].subTitle}
+                  {categories[10].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[10].description}
+                  {categories[10].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        12
+                      {categories[10].counter}
                       </span>
                     </div>
                     
@@ -396,30 +427,30 @@ const CategoryList = () => {
             </div>
           </Link>    
 
-          <Link to={"/" + userConfig.categories[11].name}>
+          <Link to={"/" + categories[11].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[11].subTitle}
+                    alt={categories[11].subTitle}
                     src={medaleImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[11].title}
+                    {categories[11].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[11].subTitle}
+                  {categories[11].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[11].description}
+                  {categories[11].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        13
+                      {categories[11].counter}
                       </span>
                     </div>
                     
@@ -429,30 +460,30 @@ const CategoryList = () => {
             </div>
           </Link>  
 
-          <Link to={"/" + userConfig.categories[12].name}>
+          <Link to={"/" + categories[12].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[12].subTitle}
+                    alt={categories[12].subTitle}
                     src={emblematyImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[12].title}
+                    {categories[12].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[12].subTitle}
+                  {categories[12].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[12].description}
+                  {categories[12].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        16
+                      {categories[12].counter}
                       </span>
                     </div>
                     
@@ -462,30 +493,30 @@ const CategoryList = () => {
             </div>
           </Link>        
 
-          <Link to={"/" + userConfig.categories[13].name}>
+          <Link to={"/" + categories[13].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[13].subTitle}
+                    alt={categories[13].subTitle}
                     src={variaImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[13].title}
+                    {categories[13].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[13].subTitle}
+                  {categories[13].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[13].description}
+                  {categories[13].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        5
+                      {categories[13].counter}
                       </span>
                     </div>
                     
@@ -495,30 +526,30 @@ const CategoryList = () => {
             </div>
           </Link>   
 
-          <Link to={"/" + userConfig.categories[14].name}>
+          <Link to={"/" + categories[14].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[14].subTitle}
+                    alt={categories[14].subTitle}
                     src={konstrukcjeImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[14].title}
+                    {categories[14].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[14].subTitle}
+                  {categories[14].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[14].description}
+                  {categories[14].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        2
+                      {categories[14].counter}
                       </span>
                     </div>
                     
@@ -528,30 +559,30 @@ const CategoryList = () => {
             </div>
           </Link>
 
-          <Link to={"/" + userConfig.categories[15].name}>
+          <Link to={"/" + categories[15].name}>
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
                   <StaticImage
                     className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={userConfig.categories[15].subTitle}
+                    alt={categories[15].subTitle}
                     src={miernikiImage}
                   />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
-                    {userConfig.categories[15].title}
+                    {categories[15].title}
                   </h2>
                   <h3 className="text-orange-500 font-semibold">
-                  {userConfig.categories[15].subTitle}
+                  {categories[15].subTitle}
                   </h3>
                   <p className="font-sans text-sm mt-2 text-slate-500 dark:text-slate-300">
-                  {userConfig.categories[15].description}
+                  {categories[15].description}
                   </p>
                   <div className="bg-transparent pt-2 mr-2 flex justify-end justify-items-end flex-wrap">
                     <div className="ml-2">
                       <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-semibold leading-none text-black bg-orange-400 rounded-full">
-                        4
+                      {categories[15].counter}
                       </span>
                     </div>
                     

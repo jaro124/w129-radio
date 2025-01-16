@@ -9,6 +9,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-radia.jpg",
+        counter: 0,
     },
     {
         name: "lampy",
@@ -18,6 +19,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-lampy.jpg",
+        counter: 0,
     },
     {
         name: "odbiorniki",
@@ -27,6 +29,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-odbiorniki.jpg",
+        counter: 0,
     },
     {
         name: "radiostacje",
@@ -36,6 +39,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-radiostacje.jpg",
+        counter: 0,
     },
     { 
         name: "czasopisma",
@@ -45,6 +49,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-czasopisma.jpg",
+        counter: 0,
     },
     { 
         name: "wtyczki",
@@ -54,6 +59,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-wtyczki.jpg",
+        counter: 0,
     },
     { 
         name: "galki",
@@ -63,6 +69,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-galki.jpg",
+        counter: 0,
     },
     { 
         name: "skale",
@@ -72,6 +79,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-skale.jpg",
+        counter: 0,
     },
     { 
         name: "scianki",
@@ -81,6 +89,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-scianki.jpg",
+        counter: 0,
     },
     { 
         name: "filatelistyka",
@@ -90,6 +99,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-filatelistyka.jpg",
+        counter: 0,
     },
     { 
         name: "filumenistyka",
@@ -99,6 +109,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-filumenistyka.jpg",
+        counter: 0,
     },
     { 
         name: "medale",
@@ -108,6 +119,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-medale.jpg",
+        counter: 0,
     },
     { 
         name: "emblematy",
@@ -117,6 +129,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-emblematy.jpg",
+        counter: 0,
     },
     { 
         name: "varia",
@@ -126,6 +139,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
         image: "../images/category-varia.jpg",
+        counter: 0,
     },
     { 
         name: "konstrukcje",
@@ -135,6 +149,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-medale.jpg",
+        counter: 0,
     },
     { 
         name: "mierniki",
@@ -144,6 +159,7 @@ const categories = [
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
         image: "../images/category-mierniki.jpg",
+        counter: 0,
     },
 ]
 
