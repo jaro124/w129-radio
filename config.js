@@ -8,7 +8,7 @@ const categories = [
         description: "W naszej kolekcji znajdują się radioodbiorniki z różnych zakątków świata, które pokazują różnorodność technologii i stylów projektowania na przestrzeni lat. Znajdziesz tu konstrukcje z lat 20-tych i 30-tych jak również 50-tych a nawet 70-tych XX wieku. Nasze zbiory są  podróżą przez historię radiofonii! ",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
-        image: "../images/category-radia.jpg",
+        image: "category-radia",
         counter: 0,
     },
     {
@@ -18,7 +18,7 @@ const categories = [
         description: "Lampy elektronowe to serce radioodbiorników, a także fundament rozwoju elektroniki XX wieku. W naszej kolekcji znajdują się różnorodne typy lamp, od klasycznych triod po złożone heptody. Każda lampa to nie tylko element techniczny, ale również świadectwo epoki, w której powstała.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
-        image: "../images/category-lampy.jpg",
+        image: "category-lampy",
         counter: 0,
     },
     {
@@ -28,7 +28,7 @@ const categories = [
         description: "Odbiorniki kryształkowe to jedne z najwcześniejszych form radioodbiorników, które stanowią ważny element naszej kolekcji. Te proste, ale innowacyjne urządzenia wykorzystywały kryształek galeny do demodulacji sygnałów radiowych, nie wymagając zasilania elektrycznego.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
-        image: "../images/category-odbiorniki.jpg",
+        image: "category-odbiorniki",
         counter: 0,
     },
     {
@@ -38,7 +38,7 @@ const categories = [
         description: "Radiotechnika znalazła także zastosowanie w wojsku. To już nie eleganckie odbiorniki radiowe a sprzęt nadawczo odbiorczy umożliwiający zapewnienie dwukierunkowej łączności w każdych warunkach także na polu walki. Oczywiście istnieją też cywilne radiostacje eksploatowane np. przez radioamatorów. W naszej kolekcji znajdują się między innymi radiostacje, które były na wyposażeniu Wojska Polskiego.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
-        image: "../images/category-radiostacje.jpg",
+        image: "category-radiostacje",
         counter: 0,
     },
     { 
@@ -48,7 +48,7 @@ const categories = [
         description: "Nasza kolekcja literatury obejmuje szeroki wachlarz materiałów, które są nieocenionym źródłem wiedzy dla miłośników radiotechniki i kolekcjonerów. Od podręczników i specjalistycznych publikacji po reklamy i katalogi producentów – nasza literatura oferuje unikalny wgląd w historię i technologię radiokomunikacji.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
-        image: "../images/category-czasopisma.jpg",
+        image: "category-czasopisma",
         counter: 0,
     },
     { 
@@ -58,7 +58,7 @@ const categories = [
         description: "W naszej kolekcji znajdują się różnorodne wtyczki i złącza od urządzeń radiowych, które odzwierciedlają rozwój standardów na przestrzeni lat oraz kraju ich powstania. Od klasycznych wtyczek zasilających i głośnikowych po specjalistyczne złącza antenowe – każda wtyczka ma swoją historię i zastosowanie. ",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
-        image: "../images/category-wtyczki.jpg",
+        image: "category-wtyczki",
         counter: 0,
     },
     { 
@@ -68,7 +68,7 @@ const categories = [
         description: "Gałki i pokrętła to nieodzowny element każdego radioodbiornika, pełniące zarówno funkcje praktyczne, jak i estetyczne. W naszej kolekcji znajdziesz klasyczne bakelitowe pokrętła oraz eleganckie chromowane gałki. Każda gałka i pokrętło to małe dzieło sztuki, które dodaje charakteru i unikalności każdemu odbiornikowi.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
-        image: "../images/category-galki.jpg",
+        image: "category-galki",
         counter: 0,
     },
     { 
@@ -78,7 +78,7 @@ const categories = [
         description: "Skale radiowe to nieodzowny element każdego radioodbiornika, który nie tylko umożliwia precyzyjne strojenie, ale również nadaje urządzeniom wyjątkowego charakteru. Każda skala radiowa to małe dzieło sztuki, które odzwierciedla estetykę i technologię swojej epoki. Zapraszamy do zapoznania się z naszą bogatą kolekcją skal radiowych, które są świadectwem historii i rozwoju radiotechniki.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
-        image: "../images/category-skale.jpg",
+        image: "category-skale",
         counter: 0,
     },
     { 
@@ -88,7 +88,7 @@ const categories = [
         description: "Tylne ścianki od radioodbiorników to często niedoceniane, ale istotne elementy konstrukcji urządzeń. Chronią one wewnętrzne komponenty, a także pełnią funkcję informacyjną, zawierając dane techniczne, schematy oraz instrukcje.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
-        image: "../images/category-scianki.jpg",
+        image: "category-scianki",
         counter: 0,
     },
     { 
@@ -98,7 +98,7 @@ const categories = [
         description: "Radio i jego historia uwiecznione zostały na znaczkach i kartkach pocztowych. Z okazji rocznic i wystaw pojawiały się wydania specjalne opatrzone często datownikiem okolicznościowym. Znaczki stosowane były również do noszenia opłat abonamentowych. Te wszystkie walory znajdują się w naszej kolekcji.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
-        image: "../images/category-filatelistyka.jpg",
+        image: "category-filatelistyka",
         counter: 0,
     },
     { 
@@ -108,7 +108,7 @@ const categories = [
         description: "Radioodbiorniki pojawiły się także na pudełkach z zapałkami. Dziś już mało popularne zapałki odegrały swoją rolę w propagowaniu techniki radiowej. W naszej kolekcji można znaleźć etykiety zapałczane z różnych zakładów produkcyjnych.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
-        image: "../images/category-filumenistyka.jpg",
+        image: "category-filumenistyka",
         counter: 0,
     },
     { 
@@ -118,7 +118,7 @@ const categories = [
         description: "Producenci sprzętu radiowego jak i stacje radiowe często reklamują się za pomocą znaczków (przypinek). Z okazji rocznic i ważnych wydarzeń emitowane są medale. W naszej kolekcji znajdują się eksponaty zarówno polskie jak i zagraniczne. Niektóre z nich przyjmują kształt lamp elektronowych, odbiorników radiowych czy fal radiowych.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
-        image: "../images/category-medale.jpg",
+        image: "category-medale",
         counter: 0,
     },
     { 
@@ -128,7 +128,7 @@ const categories = [
         description: "Emblematy na radioodbiornikach to nie tylko znaki rozpoznawcze producentów, ale również elementy, które dodają charakteru każdemu urządzeniu. W naszej kolekcji znajdziesz różnorodne emblematy, które odzwierciedlają ducha swoich czasów. Każdy emblemat opowiada historię marki i jej wkładu w rozwój technologii radiowej.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
-        image: "../images/category-emblematy.jpg",
+        image: "category-emblematy",
         counter: 0,
     },
     { 
@@ -138,7 +138,7 @@ const categories = [
         description: "W naszych zbiorach znajdują się też eksponaty takie ja: rachunki, pokwitowania czy opakowania po lampach elektronowych i odbiornikach. Są tylko luźno związane z techniką radiofonią ale wnoszą wiele wiedzy do udokumentowania rozwoju radiotechniki.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/lampy-list-template.js",
-        image: "../images/category-varia.jpg",
+        image: "category-varia",
         counter: 0,
     },
     { 
@@ -148,7 +148,7 @@ const categories = [
         description: "Oprócz kolekcjonowania historycznych radioodbiorników, prezentujemy również własne konstrukcje lampowe. Nasze projekty łączą klasyczną technologię lamp elektronowych z nowoczesnym podejściem do designu i funkcjonalności.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
-        image: "../images/category-medale.jpg",
+        image: "category-medale",
         counter: 0,
     },
     { 
@@ -158,7 +158,7 @@ const categories = [
         description: "Technika radiowa to także szereg sprzętu pomocniczego: pomiarowego, diagnostycznego, serwisowego itp. W naszejkolekcji znajdują się: mierniki lamp elektronowych, amperomierze, woltomierze, mierniki uniwersalne, generatory, oscyloskopy.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
-        image: "../images/category-mierniki.jpg",
+        image: "category-mierniki",
         counter: 0,
     },
 ]

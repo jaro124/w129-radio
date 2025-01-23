@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const CardCategory = ({ category }) => {
   return (
@@ -9,11 +9,7 @@ const CardCategory = ({ category }) => {
             <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-xl shadow-xl hover:shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-900 hover:border-gray-200 dark:hover:border-gray-600 dark:hover:bg-slate-700 md:max-w-full mb-8">
               <div className="md:flex">
                 <div className="md:shrink-0">
-                  <StaticImage
-                    className="h-48 w-full object-cover md:h-full md:w-48"
-                    alt={category.subTitle}
-                    src="../images/category-radia.jpg"
-                  />
+                  <GatsbyImage image={category.image} alt={category.subTitle} className="h-48 w-full object-cover md:h-full md:w-48" />
                 </div>
                 <div className="p-4">
                   <h2 className="text-2xl font-bold text-slate-500 dark:text-slate-200">
