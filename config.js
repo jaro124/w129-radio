@@ -148,7 +148,7 @@ const categories = [
         description: "Oprócz kolekcjonowania historycznych radioodbiorników, prezentujemy również własne konstrukcje lampowe. Nasze projekty łączą klasyczną technologię lamp elektronowych z nowoczesnym podejściem do designu i funkcjonalności.",
         pageTemplate: "./src/templates/radia-template.js",
         listTemplate: "./src/templates/radia-list-template.js",
-        image: "category-medale",
+        image: "category-konstrukcje",
         counter: 0,
     },
     { 
